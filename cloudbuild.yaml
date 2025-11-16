@@ -1,32 +1,24 @@
 steps:
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:latest'
-    id: 'Deploy-Functions-To-Regions'
-    entrypoint: 'python'
+  - name: "python:3.14"
+    entrypoint: "bash"
     args:
-      - '-c'
+      - "-c"
       - |
-        import subprocess
-        
-        REGIONS = ["us-central1"] 
-        
-        FUNCTION_NAME = "my_function"
-        
-        for region in REGIONS:
-            print(f"Deploying to region: {region}")
-            
-            command = [
-                'gcloud', 'functions', 'deploy', FUNCTION_NAME,
-                '--gen2',
-                f'--region={region}',
-                '--runtime=python311',
-                '--source=.',
-                '--entry-point=main',
-                '--trigger-http',
-                '--allow-unauthenticated'
-            ]
+        set -ex
+        # Устанавливаем gcloud CLI
+        pip install --upgrade pip
+        pip install google-cloud-sdk
 
-            subprocess.run(command, check=True)
-
+        REGION="us-central1"
+        echo "Deploying to region: $REGION"
+        gcloud functions deploy my_function \
+          --gen2 \
+          --region="$REGION" \
+          --runtime=python311 \
+          --source=. \
+          --entry-point=main \
+          --trigger-http \
+          --allow-unauthenticated
 timeout: 1200s
 options:
   logging: CLOUD_LOGGING_ONLY
