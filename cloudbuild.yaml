@@ -4,21 +4,20 @@ steps:
     args:
       - "-c"
       - |
+        set -ex
         REGIONS=("us-central1")
 
         for REGION in "${REGIONS[@]}"; do
           echo "Deploying to region: $REGION"
-
           gcloud functions deploy my_function \
             --gen2 \
-            --region=$REGION \
+            --region="$REGION" \
             --runtime=python311 \
             --source=. \
             --entry-point=main \
             --trigger-http \
             --allow-unauthenticated
         done
-
 timeout: 1200s
 
 options:
