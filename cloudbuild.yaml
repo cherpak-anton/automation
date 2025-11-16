@@ -5,13 +5,14 @@ steps:
       - "-c"
       - |
         set -ex
-        REGIONS=("us-central1")
+        # Используем двойной доллар: $$
+        REGIONS=("us-central1") 
 
-        for REGION in "${REGIONS[@]}"; do
-          echo "Deploying to region: $REGION"
+        for REGION in $${REGIONS[@]}; do # Используем $$ здесь
+          echo "Deploying to region: $$REGION" # Используем $$ здесь
           gcloud functions deploy my_function \
             --gen2 \
-            --region="$REGION" \
+            --region="$$REGION" \
             --runtime=python311 \
             --source=. \
             --entry-point=main \
