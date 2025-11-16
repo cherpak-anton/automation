@@ -1,24 +1,35 @@
 steps:
   - name: "python:3.14"
-    entrypoint: "bash"
+    entrypoint: 'python3'
     args:
       - "-c"
       - |
-        set -ex
-        # Устанавливаем gcloud CLI
-        pip install --upgrade pip
-        pip install google-cloud-sdk
+        import subprocess
 
-        REGION="us-central1"
-        echo "Deploying to region: $REGION"
-        gcloud functions deploy my_function \
-          --gen2 \
-          --region="$REGION" \
-          --runtime=python311 \
-          --source=. \
-          --entry-point=main \
-          --trigger-http \
-          --allow-unauthenticated
+        REGIONS = ["us-central1"]
+        
+        FUNCTION_NAME = "my_function"
+        RUNTIME = "python311"
+        ENTRY_POINT = "main"
+
+        for region in REGIONS:
+            print(f"Deploying function to region: {region}")
+            
+            command = [
+                'gcloud', 'functions', 'deploy', FUNCTION_NAME,
+                '--gen2',
+                f'--region={region}',
+                f'--runtime={RUNTIME}',
+                '--source=.',
+                f'--entry-point={ENTRY_POINT}',
+                '--trigger-http',
+                '--allow-unauthenticated'
+            ]
+            
+            subprocess.run(command, check=True)
+            print(f"Successfully deployed to {region}")
+
+
 timeout: 1200s
 options:
   logging: CLOUD_LOGGING_ONLY
