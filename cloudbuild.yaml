@@ -1,6 +1,6 @@
 steps:
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk:latest"
-    entrypoint: 'python3'8
+    entrypoint: 'python3'
     args:
       - "-c"
       - |
