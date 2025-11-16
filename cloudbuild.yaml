@@ -1,13 +1,4 @@
 steps:
-  # Install dependencies
-  - name: "python:3.11"
-    entrypoint: "bash"
-    args:
-      - "-c"
-      - |
-        pip install -r requirements.txt -t ./package
-
-  # Deploy to multiple regions
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk:latest"
     entrypoint: "bash"
     args:
