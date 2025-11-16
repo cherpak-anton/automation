@@ -1,6 +1,7 @@
 steps:
-  - name: "python:3.14"
-    entrypoint: 'python3'
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk:latest"
+    id: 'Deploy-Functions-To-Regions'
+    entrypoint: 'python3'8
     args:
       - "-c"
       - |
