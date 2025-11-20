@@ -1,46 +1,53 @@
-import subprocess
-import zipfile
+# filename: runner/executor.py
+
 import os
-from .storage import download_from_gcs
-from .logger import log
+import subprocess
+import tempfile
+from runner.logger import log
 
-CODE_ZIP = "/tmp/code.zip"
-CODE_DIR = "/tmp/code"
-ENTRY_FILE = "main.py"  # можно поменять
+def run_python_tests(repo_url: str, branch: str = "main", region: str = "US", locale: str = "en-US"):
+    """
+    Clone tests from Git, install test dependencies, and run Playwright tests.
+    Returns dict with stdout, stderr, returncode.
+    """
+    log(f"Starting test execution. Repo: {repo_url}, Branch: {branch}, Region: {region}, Locale: {locale}")
 
+    with tempfile.TemporaryDirectory() as tmpdir:
+        # Clone repo
+        log("Cloning repository...")
+        subprocess.run(["git", "clone", repo_url, tmpdir], check=True)
+        subprocess.run(["git", "checkout", branch], cwd=tmpdir, check=True)
 
-def run_python_code(gcs_url: str):
+        # Install additional test dependencies if requirements-tests.txt exists
+        req_file = os.path.join(tmpdir, "requirements-tests.txt")
+        if os.path.exists(req_file):
+            log("Installing additional test dependencies...")
+            subprocess.run(["pip", "install", "-r", req_file], check=True)
 
-    # 1. Download
-    log("Downloading code...")
-    download_from_gcs(gcs_url, CODE_ZIP)
+        # Ensure Playwright browsers installed
+        log("Installing Playwright browsers...")
+        subprocess.run(["playwright", "install"], check=True)
 
-    # 2. Unzip
-    if os.path.exists(CODE_DIR):
-        subprocess.run(["rm", "-rf", CODE_DIR])
-    os.makedirs(CODE_DIR, exist_ok=True)
+        # Set environment variables for tests
+        env = os.environ.copy()
+        env["REGION"] = region
+        env["LOCALE"] = locale
 
-    with zipfile.ZipFile(CODE_ZIP, 'r') as z:
-        z.extractall(CODE_DIR)
+        # Run pytest on tests folder
+        log("Running tests...")
+        result = subprocess.run(
+            ["pytest", "tests", "--maxfail=5", "--disable-warnings", "-q"],
+            cwd=tmpdir,
+            env=env,
+            capture_output=True,
+            text=True
+        )
 
-    log("Code unzipped.")
+        log("Test execution finished.")
+        log(f"Return code: {result.returncode}")
 
-    # 3. Execute
-    entry_path = os.path.join(CODE_DIR, ENTRY_FILE)
-
-    if not os.path.isfile(entry_path):
-        raise FileNotFoundError(f"Entry file '{ENTRY_FILE}' not found in archive")
-
-    log("Running Python entry file: " + entry_path)
-
-    result = subprocess.run(
-        ["python3", entry_path],
-        capture_output=True,
-        text=True
-    )
-
-    log("Execution stdout:\n" + result.stdout)
-    log("Execution stderr:\n" + result.stderr)
-
-    return result.stdout
-
+        return {
+            "stdout": result.stdout,
+            "stderr": result.stderr,
+            "returncode": result.returncode
+        }

@@ -1,32 +1,17 @@
-import json
-from flask import Request
-from runner.executor import run_python_code
+from runner.executor import run_python_tests
 from runner.logger import log
 
-def main(request: Request):
+def main(region="US", locale="en-US", branch="main", repo_url="https://github.com/your-org/your-tests.git"):
+    """
+    Entry point for scheduled or Cloud Build-triggered execution.
+    """
+    log(f"Trigger received. Repo: {repo_url}, Branch: {branch}, Region: {region}, Locale: {locale}")
 
     try:
-        payload = request.get_json(silent=True)
-
-        if not payload:
-            return {"error": "Empty request"}, 400
-
-        code_url = payload.get("code_url")
-
-        if not code_url:
-            return {"error": "code_url is required"}, 400
-
-        log("Trigger received. Code URL: " + code_url)
-
-        # run code
-        output = run_python_code(code_url)
-
+        output = run_python_tests(repo_url, branch, region, locale)
         log("Execution finished.")
-        log("Output: " + str(output))
-
-        return {"status": "ok", "output": output}, 200
-
+        log(f"Output: {output}")
+        return output
     except Exception as e:
-        log("ERROR: " + str(e))
-        return {"error": str(e)}, 500
-
+        log(f"ERROR: {e}")
+        return {"error": str(e)}
