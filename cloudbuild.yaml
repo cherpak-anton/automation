@@ -5,12 +5,13 @@ steps:
       - "-c"
       - |
         import subprocess
+        import json
 
-        REGIONS = ["us-central1"]
-        
+        REGIONS = ["us-central1"]        
         FUNCTION_NAME = "my_function"
         RUNTIME = "python311"
         ENTRY_POINT = "main"
+        deployed = []
 
         for region in REGIONS:
             print(f"Deploying function to region: {region}")
@@ -20,16 +21,24 @@ steps:
                 '--gen2',
                 f'--region={region}',
                 f'--runtime={RUNTIME}',
-                '--source=.',
+                '--source=source/',
                 f'--entry-point={ENTRY_POINT}',
-                '--trigger-http',
-                '--allow-unauthenticated'
+                '--trigger-http'
             ]
             
             subprocess.run(command, check=True)
+            deployed.append({"name": FUNCTION_NAME, "region": region})
+
             print(f"Successfully deployed to {region}")
 
+        with open('/workspace/functions.json', 'w') as f:
+            json.dump(deployed, f)
 
 timeout: 1200s
 options:
   logging: CLOUD_LOGGING_ONLY
+
+artifacts:
+  objects:
+    location: gs://qa-test-roidev/qa-function-creation/
+    paths: ["functions.json"] 
