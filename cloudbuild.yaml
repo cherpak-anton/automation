@@ -27,8 +27,15 @@ steps:
             ]
             
             subprocess.run(command, check=True)
-            deployed.append({"name": FUNCTION_NAME, "region": region})
-
+            describe_cmd = [
+                'gcloud', 'functions', 'describe', FUNCTION_NAME,
+                '--region', region,
+                '--gen2',
+                '--format=json'
+            ]
+            result = subprocess.run(describe_cmd, check=True, capture_output=True, text=True)
+            func_info = json.loads(result.stdout)
+            deployed.append(func_info)
             print(f"Successfully deployed to {region}")
 
         with open('/workspace/functions.json', 'w') as f:
