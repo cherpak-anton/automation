@@ -17,7 +17,7 @@ steps:
         gsutil ls -R gs://qa-test-roidev/tests-wikly/source/
 
   # ---------------------------------------------
-  # (1) Your original function-invocation step (НЕ ТРОНУТ)
+  # (1) Your original function-invocation step
   # ---------------------------------------------
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk:latest"
     entrypoint: 'python3'
