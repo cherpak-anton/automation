@@ -7,7 +7,14 @@ steps:
     args:
       - -c
       - |
+        echo "📁 Файлы для копирования из source/:"
+        ls -R source/
+        
+        echo "⬆️ Копируем в GCS: gs://qa-test-roidev/tests-wikly/source/"
         gsutil -m cp -r source/* gs://qa-test-roidev/tests-wikly/source/
+        
+        echo "✅ Копирование завершено. Содержимое бакета:"
+        gsutil ls -R gs://qa-test-roidev/tests-wikly/source/
 
   # ---------------------------------------------
   # (1) Your original function-invocation step (НЕ ТРОНУТ)
@@ -15,72 +22,71 @@ steps:
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk:latest"
     entrypoint: 'python3'
     args:
-        - "-c"
-        - |
-            import subprocess
-            import json
-            import sys
+      - "-c"
+      - |
+        import subprocess
+        import json
+        import sys
 
-            REGIONS = ["us-central1"]
-            FUNCTIONS = ["my_function"]
-            BUILD_ID = "${BUILD_ID}"
+        REGIONS = ["us-central1"]
+        FUNCTIONS = ["my_function"]
+        BUILD_ID = "${BUILD_ID}"
 
-            def execute_command(command_parts, error_msg):
+        def execute_command(command_parts, error_msg):
+            try:
+                result = subprocess.run(command_parts, check=True, capture_output=True, text=True)
+                return result.stdout.strip()
+            except subprocess.CalledProcessError as e:
+                print(f"\n❌ Критическая ошибка: {error_msg}")
+                print(f"Команда: {' '.join(command_parts)}")
+                print(f"Stderr: {e.stderr.strip()[:500]}")
+                sys.exit(1)
+
+        for region in REGIONS:
+            for func in FUNCTIONS:
+                print(f"\n--- Начинаем вызов {func} в регионе {region} ---")
+
+                # Получаем URL функции
+                URL = execute_command([
+                    'gcloud', 'functions', 'describe', func,
+                    f'--region={region}',
+                    '--gen2',
+                    '--format=value(serviceConfig.uri)'
+                ], f"Не удалось получить URL для {func}")
+                print(f"URL: {URL}")
+
+                # Получаем IAM токен
+                TOKEN = execute_command([
+                    'gcloud', 'auth', 'print-identity-token',
+                    '--audiences', URL
+                ], "Не удалось получить IAM токен")
+
+                # Формируем payload
+                PAYLOAD = json.dumps({
+                    "source": "gs://qa-test-roidev/tests-wikly/source/",
+                    "region": region,
+                    "build_id": BUILD_ID
+                })
+
+                # Вызываем функцию и получаем ответ
+                curl_command = [
+                    'curl', '-s', '-X', 'POST', URL,
+                    '-H', f'Authorization: Bearer {TOKEN}',
+                    '-H', 'Content-Type: application/json',
+                    '-d', PAYLOAD
+                ]
+                response = execute_command(curl_command, f"Вызов функции {func} завершился ошибкой")
+
+                # Печатаем ответ в Cloud Build логи
                 try:
-                    result = subprocess.run(command_parts, check=True, capture_output=True, text=True)
-                    return result.stdout.strip()
-                except subprocess.CalledProcessError as e:
-                    print(f"\n❌ Критическая ошибка: {error_msg}")
-                    print(f"Команда: {' '.join(command_parts)}")
-                    print(f"Stderr: {e.stderr.strip()[:500]}")
-                    sys.exit(1)
+                    parsed = json.loads(response)
+                    print("Ответ функции (parsed JSON):")
+                    print(json.dumps(parsed, indent=2))
+                except json.JSONDecodeError:
+                    print("Ответ функции (raw):")
+                    print(response)
 
-            for region in REGIONS:
-                for func in FUNCTIONS:
-                    print(f"\n--- Начинаем вызов {func} в регионе {region} ---")
-
-                    # Получаем URL функции
-                    URL = execute_command([
-                        'gcloud', 'functions', 'describe', func,
-                        f'--region={region}',
-                        '--gen2',
-                        '--format=value(serviceConfig.uri)'
-                    ], f"Не удалось получить URL для {func}")
-                    print(f"URL: {URL}")
-
-                    # Получаем IAM токен
-                    TOKEN = execute_command([
-                        'gcloud', 'auth', 'print-identity-token',
-                        '--audiences', URL
-                    ], "Не удалось получить IAM токен")
-
-                    # Формируем payload
-                    PAYLOAD = json.dumps({
-                        "source": "gs://qa-test-roidev/tests-wikly/source/",
-                        "region": region,
-                        "build_id": BUILD_ID
-                    })
-
-                    # Вызываем функцию и получаем ответ
-                    curl_command = [
-                        'curl', '-s', '-X', 'POST', URL,
-                        '-H', f'Authorization: Bearer {TOKEN}',
-                        '-H', 'Content-Type: application/json',
-                        '-d', PAYLOAD
-                    ]
-                    response = execute_command(curl_command, f"Вызов функции {func} завершился ошибкой")
-
-                    # Печатаем ответ в Cloud Build логи
-                    try:
-                        parsed = json.loads(response)
-                        print("Ответ функции (parsed JSON):")
-                        print(json.dumps(parsed, indent=2))
-                    except json.JSONDecodeError:
-                        print("Ответ функции (raw):")
-                        print(response)
-
-                    print(f"✅ Успешно вызвано {func} в {region}")
-
+                print(f"✅ Успешно вызвано {func} в {region}")
 
 options:
   logging: CLOUD_LOGGING_ONLY
