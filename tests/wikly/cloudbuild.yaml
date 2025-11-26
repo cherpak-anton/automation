@@ -7,11 +7,11 @@ steps:
     args:
       - -c
       - |
-        echo "📁 Файлы для копирования из source/:"
-        ls -R source/
+        echo "📁 Файлы для копирования из tests/wikly/:"
+        ls -R tests/wikly/
         
-        echo "⬆️ Копируем в GCS: gs://qa-test-roidev/tests-wikly/source/"
-        gsutil -m cp -r source/* gs://qa-test-roidev/tests-wikly/source/
+        echo "⬆️ Копируем в GCS: gs://qa-test-roidev/tests-wikly/"
+        gsutil -m cp -r tests/wikly/* gs://qa-test-roidev/tests-wikly/
         
         echo "✅ Копирование завершено. Содержимое бакета:"
         gsutil ls -R gs://qa-test-roidev/tests-wikly/source/
