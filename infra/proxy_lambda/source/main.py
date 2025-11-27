@@ -1,11 +1,11 @@
-# file: runner/main.py
+# file: infra/proxy_lambda/surce/main.py
 
 from runner.executor import run_python_tests
 from runner.logger import Logger
+import traceback
 
-log = Logger().log
-get_logs = Logger().get 
-
+logger = Logger()
+log = logger.log
 
 def main(params=None):
 
@@ -20,20 +20,23 @@ def main(params=None):
     try:
         log(f"Params received: {params}")
 
-        # replace real run:
-        output = params
+        # --- сюда вставляется реальный запуск ---
+        output = params  # replace with: run_python_tests(...)
 
         log("Execution finished.")
         log(f"Output: {output}")
 
         return {
-            "logs": get_logs(),
+            "logs": logger.get_logs(),
             "result": output
         }
 
     except Exception as e:
+        tb = traceback.format_exc()
         log(f"ERROR: {e}")
+        log(tb)
         return {
-            "logs": get_logs(),
-            "error": str(e)
+            "logs": logger.get_logs(),
+            "error": str(e),
+            "traceback": tb
         }
