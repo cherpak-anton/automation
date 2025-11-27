@@ -1,10 +1,14 @@
+# file: runner/main.py
+
 from runner.executor import run_python_tests
-from runner.logger import log
+from runner.logger import Logger
+
+log = Logger().log
+get_logs = Logger().get 
+
 
 def main(params=None):
-    """
-    Entry point for scheduled or Cloud Build-triggered execution.
-    """
+
     if params is None:
         params = {
             "region": "US",
@@ -12,15 +16,24 @@ def main(params=None):
             "branch": "main",
             "repo_url": "https://github.com/your-org/your-tests.git"
         }
-    
-    # log(f"Trigger received. Repo: {repo_url}, Branch: {branch}, Region: {region}, Locale: {locale}")
 
     try:
-        # output = run_python_tests(repo_url, branch, region, locale)
-        print(params)    
+        log(f"Params received: {params}")
+
+        # replace real run:
+        output = params
+
         log("Execution finished.")
-        log(f"Output: {params}")
-        return params
+        log(f"Output: {output}")
+
+        return {
+            "logs": get_logs(),
+            "result": output
+        }
+
     except Exception as e:
         log(f"ERROR: {e}")
-        return {"error": str(e)}
+        return {
+            "logs": get_logs(),
+            "error": str(e)
+        }

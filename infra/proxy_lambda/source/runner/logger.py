@@ -1,10 +1,24 @@
+# file: runner/logger.py
+
 import datetime
 
-LOGFILE = "/tmp/log.txt"
+class Logger:
+    def __init__(self, logfile="/tmp/log.txt"):
+        self.logfile = logfile
+        self.buffer = []
 
-def log(text: str):
-    timestamp = datetime.datetime.utcnow().isoformat()
-    
-    with open(LOGFILE, "a") as f:
-        f.write(f"[{timestamp}] {text}\n")
+    def log(self, text: str):
+        """Write to file, store in memory, print."""
+        timestamp = datetime.datetime.utcnow().isoformat()
+        line = f"[{timestamp}] {text}"
 
+        self.buffer.append(line)
+
+        with open(self.logfile, "a") as f:
+            f.write(line + "\n")
+
+        print(line)
+
+    def get_logs(self):
+        """Return all collected logs."""
+        return self.buffer[:]

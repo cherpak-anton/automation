@@ -47,6 +47,7 @@ steps:
                 print(f"\n--- Начинаем вызов {func} в регионе {region} ---")
 
                 # Получаем URL функции
+                print("Получаем URL функции")
                 URL = execute_command([
                     'gcloud', 'functions', 'describe', func,
                     f'--region={region}',
@@ -56,28 +57,34 @@ steps:
                 print(f"URL: {URL}")
 
                 # Получаем IAM токен
+                print("Получаем IAM токен")
                 TOKEN = execute_command([
                     'gcloud', 'auth', 'print-identity-token',
                     '--audiences', URL
                 ], "Не удалось получить IAM токен")
 
                 # Формируем payload
-                PAYLOAD = json.dumps({
+                print("Формируем payload")
+                payload = json.dumps({
                     "source": "gs://qa-test-roidev/tests-wikly/source/",
                     "region": region,
                     "build_id": BUILD_ID
                 })
+                print(payload)
 
                 # Вызываем функцию и получаем ответ
+                print("Вызываем функцию и получаем ответ")
                 curl_command = [
                     'curl', '-s', '-X', 'POST', URL,
                     '-H', f'Authorization: Bearer {TOKEN}',
                     '-H', 'Content-Type: application/json',
-                    '-d', PAYLOAD
+                    '-d', payload
                 ]
                 response = execute_command(curl_command, f"Вызов функции {func} завершился ошибкой")
+                print(response)
 
                 # Печатаем ответ в Cloud Build логи
+                print(" Печатаем ответ в Cloud Build логи")
                 try:
                     parsed = json.loads(response)
                     print("Ответ функции (parsed JSON):")
