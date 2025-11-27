@@ -10,7 +10,7 @@ steps:
         REGIONS = ["us-central1"]        
         FUNCTION_NAME = "my_function"
         RUNTIME = "python311"
-        ENTRY_POINT = "main"
+        ENTRY_POINT = "entrypoint"
         deployed = []
 
         for region in REGIONS:
