@@ -1,5 +1,6 @@
 # file: infra/proxy_lambda/source/main.py
 
+from functions_framework import create_app
 from runner.executor import run_python_tests
 from runner.logger import Logger
 import traceback
@@ -8,7 +9,7 @@ import json
 logger = Logger()
 log = logger.log
 
-def main(request):
+def entrypoint(request):
     """
     Cloud Functions Gen2 HTTP entrypoint
     `request` — объект flask-like с методами .get_json(), .args, etc.
@@ -50,3 +51,7 @@ def main(request):
             "status": "Error"
         }
         return json.dumps(response), 500, {"Content-Type": "application/json"}
+
+
+# Create HTTP app for GCF Gen2
+app = create_app(target=entrypoint)

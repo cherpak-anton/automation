@@ -1,3 +1,5 @@
 google-cloud-storage
 playwright
 pytest
+
+functions-framework==3.*
