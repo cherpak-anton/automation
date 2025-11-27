@@ -20,7 +20,7 @@ def main(params=None):
         print(params)    
         log("Execution finished.")
         log(f"Output: {params}")
-        return output
+        return params
     except Exception as e:
         log(f"ERROR: {e}")
         return {"error": str(e)}
