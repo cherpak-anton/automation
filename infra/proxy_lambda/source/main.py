@@ -1,32 +1,21 @@
 # file: infra/proxy_lambda/source/main.py
 
-from functions_framework import create_app
+
 from runner.logger import Logger
 import json, traceback
 
 logger = Logger()
 log = logger.log
 
-def entrypoint(request):
+def main(request):
     try:
-        params = request.get_json(silent=True) or {"region":"US","locale":"en-US","branch":"main","repo_url":"https://github.com/your-org/your-tests.git"}
-        log(f"Params received: {params}")
-
-        output = params  # здесь будет run_python_tests(...)
-
-        log("Execution finished.")
-        log(f"Output: {output}")
-
-        return json.dumps({"logs": logger.get_logs(), "result": output, "status": "ok"}), 200, {"Content-Type":"application/json"}
+        log("Received request")  # Log incoming request
+        # Echo request as JSON
+        response = {"status": "ok", "request": json.dumps(request)}
+        return response, 200
     except Exception as e:
-        tb = traceback.format_exc()
-        log(f"ERROR: {e}")
-        log(tb)
-        return json.dumps({"logs": logger.get_logs(), "error": str(e), "traceback": tb, "status": "Error"}), 500, {"Content-Type":"application/json"}
-
-app = create_app(target=entrypoint)  # <- обязательно создаём HTTP-приложение
-
-
+        log(f"Error: {traceback.format_exc()}")
+        return {"status": "error", "message": str(e)}, 500
 
 
 # # file: infra/proxy_lambda/source/main.py
