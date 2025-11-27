@@ -1,4 +1,4 @@
-google-cloud-storage
-playwright
-pytest
 functions-framework==3.*
+google-cloud-storage
+pytest
+playwright

@@ -23,7 +23,8 @@ steps:
                 f'--runtime={RUNTIME}',
                 '--source=infra/proxy_lambda/source/',
                 f'--entry-point={ENTRY_POINT}',
-                '--trigger-http'
+                '--trigger-http',
+                '--timeout=600s'
             ]
             
             subprocess.run(command, check=True)
