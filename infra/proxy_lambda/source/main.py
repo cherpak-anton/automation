@@ -8,7 +8,11 @@
 # log = logger.log
 
 def main(params=None):
-    pass
+    return {"status": "ok"}, 200
+
+
+# def main(params=None):
+#     pass
     # if params is None:
     #     params = {
     #         "region": "US",
