@@ -45,7 +45,7 @@ steps:
                 '--gen2',
                 f'--region={region}',
                 '--runtime=custom',
-                f'--docker-image={DOCKER_IMAGE}',
+                f'--image={DOCKER_IMAGE}',
                 f'--entry-point={ENTRY_POINT}',
                 '--trigger-http',
                 '--timeout=600s'
