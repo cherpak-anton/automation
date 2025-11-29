@@ -40,8 +40,7 @@ def main(request: Request):
 
     except Exception:
         log(f"Error: {traceback.format_exc()}")
-        logs = get_logs()
+        logs =get_logs()
         if not isinstance(logs, (list, str)):
             logs = str(logs)
         return {"status": "error", "message": "internal error", "logs": logs}, 500
-    
