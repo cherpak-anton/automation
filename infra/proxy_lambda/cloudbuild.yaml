@@ -10,7 +10,6 @@ steps:
         REGIONS = ["us-central1"]        
         FUNCTION_NAME = "my_function"
         ENTRY_POINT = "main"
-        DOCKER_IMAGE = "mcr.microsoft.com/playwright/python:v1.56.0-noble"
         deployed = []
 
         for region in REGIONS:
@@ -20,9 +19,9 @@ steps:
                 'gcloud', 'functions', 'deploy', FUNCTION_NAME,
                 '--gen2',
                 f'--region={region}',
+                '--runtime=custom',
                 '--source=infra/proxy_lambda/source/',
                 f'--entry-point={ENTRY_POINT}',
-                f'--docker-image={DOCKER_IMAGE}',
                 '--trigger-http',
                 '--timeout=600s'
             ]
