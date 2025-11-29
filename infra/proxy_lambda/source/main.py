@@ -23,10 +23,6 @@ def main(request: Request):
         if not isinstance(logs, (list, str)):
             logs = str(logs)
 
-        # create responce status code
-        log(f"return_state {return_state}")
-        log(f"massage {massage}")
-
         # Determine HTTP status
         status_code = 200 if result.get("exit_code", 1) == 0 else 500
 
