@@ -1,5 +1,6 @@
 project/
 │
+├── cloudbuild.yaml
 ├── source/
 │   ├── main.py                # главная Cloud Function
 │   ├── requirements.txt
