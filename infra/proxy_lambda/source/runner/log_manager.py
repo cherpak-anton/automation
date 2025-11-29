@@ -22,3 +22,8 @@ class Logger:
     def get_logs(self):
         """Return all collected logs."""
         return self.buffer[:]
+
+# GLOBAL singleton
+logger = Logger()
+log = logger.log
+get_logs = logger.get_logs

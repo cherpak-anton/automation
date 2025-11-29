@@ -1,77 +1,47 @@
 # file: infra/proxy_lambda/source/main.py
 
+import tempfile, shutil, json, traceback
+from flask import Request
+from runner.log_manager import log, get_logs
+from runner.executor import run_python_project
 
-from runner.logger import Logger
-import json, traceback
-
-logger = Logger()
-log = logger.log
-
-def main(request):
+def main(request: Request):
     try:
-        log("Received request")  # Log incoming request
-        # Echo request as JSON
-        response = {"status": "ok", "request": json.dumps(request)}
-        return response, 200
-    except Exception as e:
+        log("Received request")  
+
+        data = request.get_json(force=True)
+        log(json.dumps(data))  # log full input
+
+        result = run_python_project(data)
+
+        log(f"stdout: {result.get('stdout')}")
+        log(f"stderr: {result.get('stderr')}")
+        log(f"exit_code: {result.get('exit_code')}")
+
+        # Logs must be plain list/str for JSON
+        logs = get_logs()
+        if not isinstance(logs, (list, str)):
+            logs = str(logs)
+
+        # create responce status code
+        log(f"return_state {return_state}")
+        log(f"massage {massage}")
+
+        # Determine HTTP status
+        status_code = 200 if result.get("exit_code", 1) == 0 else 500
+
+        return {
+            "status": "ok",
+            "request": data,
+            "stdout": result.get("stdout"),
+            "stderr": result.get("stderr"),
+            "logs": logs
+        }, status_code
+
+    except Exception:
         log(f"Error: {traceback.format_exc()}")
-        return {"status": "error", "message": str(e)}, 500
-
-
-# # file: infra/proxy_lambda/source/main.py
-
-# from functions_framework import create_app
-# from runner.executor import run_python_tests
-# from runner.logger import Logger
-# import traceback
-# import json
-
-# logger = Logger()
-# log = logger.log
-
-# def entrypoint(request):
-#     """
-#     Cloud Functions Gen2 HTTP entrypoint
-#     `request` — объект flask-like с методами .get_json(), .args, etc.
-#     """
-#     try:
-#         params = request.get_json(silent=True)
-#         if params is None:
-#             params = {
-#                 "region": "US",
-#                 "locale": "en-US",
-#                 "branch": "main",
-#                 "repo_url": "https://github.com/your-org/your-tests.git"
-#             }
-
-#         log(f"Params received: {params}")
-
-#         # --- реальный запуск ---
-#         output = params  # run_python_tests(...) заменяем на заглушку
-
-#         log("Execution finished.")
-#         log(f"Output: {output}")
-
-#         response = {
-#             "logs": logger.get_logs(),
-#             "result": output,
-#             "status": "ok"
-#         }
-#         return json.dumps(response), 200, {"Content-Type": "application/json"}
-
-#     except Exception as e:
-#         tb = traceback.format_exc()
-#         log(f"ERROR: {e}")
-#         log(tb)
-
-#         response = {
-#             "logs": logger.get_logs(),
-#             "error": str(e),
-#             "traceback": tb,
-#             "status": "Error"
-#         }
-#         return json.dumps(response), 500, {"Content-Type": "application/json"}
-
-
-# # Create HTTP app for GCF Gen2
-# app = create_app(target=entrypoint)
+        logs = get_logs()
+        if not isinstance(logs, (list, str)):
+            logs = str(logs)
+        return {"status": "error", "message": "internal error", "logs": logs}, 500
+    

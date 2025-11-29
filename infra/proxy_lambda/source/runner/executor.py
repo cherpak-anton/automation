@@ -1,53 +1,71 @@
-# filename: runner/executor.py
+# filename: infra/proxy_lambda/source/runner/executor.py
 
 import os
 import subprocess
 import tempfile
-from runner.logger import log
+from runner.log_manager import log
+from runner.storage import download_dir_from_gcs
 
-def run_python_tests(repo_url: str, branch: str = "main", region: str = "US", locale: str = "en-US"):
-    """
-    Clone tests from Git, install test dependencies, and run Playwright tests.
-    Returns dict with stdout, stderr, returncode.
-    """
-    log(f"Starting test execution. Repo: {repo_url}, Branch: {branch}, Region: {region}, Locale: {locale}")
 
-    with tempfile.TemporaryDirectory() as tmpdir:
-        # Clone repo
-        log("Cloning repository...")
-        subprocess.run(["git", "clone", repo_url, tmpdir], check=True)
-        subprocess.run(["git", "checkout", branch], cwd=tmpdir, check=True)
+def download_project(data):
+    """Download project from GCS into temp folder and return path."""
+    tmp = tempfile.mkdtemp()
+    log(f"tmp: {tmp}")
 
-        # Install additional test dependencies if requirements-tests.txt exists
-        req_file = os.path.join(tmpdir, "requirements-tests.txt")
-        if os.path.exists(req_file):
-            log("Installing additional test dependencies...")
-            subprocess.run(["pip", "install", "-r", req_file], check=True)
+    try:
+        download_dir_from_gcs(data["source"], tmp)
+    except Exception as e:
+        log(f"Download error: {str(e)}")
+        raise
 
-        # Ensure Playwright browsers installed
-        log("Installing Playwright browsers...")
-        subprocess.run(["playwright", "install"], check=True)
+    return tmp
 
-        # Set environment variables for tests
-        env = os.environ.copy()
-        env["REGION"] = region
-        env["LOCALE"] = locale
+def run_python_project(data):
+    """Download project, install requirements, run main.py, return stdout/stderr/exit_code."""
+    # Step 1: download project
+    path = download_project(data)
+    log(f"Project downloaded to {path}")
 
-        # Run pytest on tests folder
-        log("Running tests...")
-        result = subprocess.run(
-            ["pytest", "tests", "--maxfail=5", "--disable-warnings", "-q"],
-            cwd=tmpdir,
-            env=env,
+    req = os.path.join(path, "requirements.txt")
+    main_py = os.path.join(path, "main.py")
+
+    # English comment: install dependencies if present
+    # Step 2: install requirements
+    if os.path.exists(req):
+        log("installing requirements.txt")
+        req_proc = subprocess.run(
+            ["pip3", "install", "-r", req, "--target", path],
             capture_output=True,
             text=True
         )
+        log(f"pip exit_code: {req_proc.returncode}")
+        log(f"pip stdout: {req_proc.stdout}")
+        log(f"pip stderr: {req_proc.stderr}")
 
-        log("Test execution finished.")
-        log(f"Return code: {result.returncode}")
+    # Step 3: determine entrypoint
+    if os.path.exists(init_sh):
+        log("found init.sh, giving it priority over main.py")
+        entry_cmd = ["bash", init_sh]
+    elif os.path.exists(main_py):
+        entry_cmd = ["python3", main_py]
+    else:
+        raise Exception("Neither main.py nor init.sh found in downloaded project")
 
-        return {
-            "stdout": result.stdout,
-            "stderr": result.stderr,
-            "returncode": result.returncode
-        }
+    # Step 4: run entrypoint
+    log(f"executing {'init.sh' if os.path.exists(init_sh) else 'main.py'}")
+    proc = subprocess.run(
+        entry_cmd,
+        cwd=path,
+        capture_output=True,
+        text=True
+    )
+    log("execution finished")
+
+    # Step 5: cleanup
+    subprocess.run(["rm", "-rf", path])
+
+    return {
+        "stdout": proc.stdout,
+        "stderr": proc.stderr,
+        "exit_code": proc.returncode
+    }
