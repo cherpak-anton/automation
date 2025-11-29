@@ -28,6 +28,7 @@ def run_python_project(data):
 
     req = os.path.join(path, "requirements.txt")
     main_py = os.path.join(path, "main.py")
+    init_sh = os.path.join(path, "init.sh") 
 
     # English comment: install dependencies if present
     # Step 2: install requirements
