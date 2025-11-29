@@ -1,15 +1,17 @@
-project/
+automation/
 │
-├── cloudbuild.yaml
-├── source/
-│   ├── main.py                # главная Cloud Function
-│   ├── requirements.txt
-│   ├── runner/
-│       ├── executor.py        # загрузка + исполнение кода
-│       ├── storage.py         # работа с Cloud Storage
-│       ├── logger.py          # логгер
-│
-└── README.md
+├── infra/
+│   └── proxy_lambda/
+│       ├── cloudbuild.yaml
+│       ├── source/
+│       │   ├── main.py                # главная Cloud Function
+│       │   ├── requirements.txt
+│       │   ├── runner/
+│       │       ├── executor.py        # загрузка + исполнение кода
+│       │       ├── storage.py         # работа с Cloud Storage
+│       │       ├── logger.py          # логгер
+│       └── README.md
+
 
 
 
