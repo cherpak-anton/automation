@@ -26,8 +26,9 @@ def deploy_functions():
             'gcloud', 'run', 'jobs', 'create', FUNCTION_NAME,
             f'--region={region}',
             f'--image={docker_image}',
-            # '--platform=managed',                    
             '--task-timeout', '1800s',
+            '--startup-probe-type=None',
+            '--liveness-probe-type=None',
             '--command', 'python',
             '--args', 'main.py'
         ]
@@ -36,7 +37,6 @@ def deploy_functions():
         describe_cmd = [
             'gcloud', 'run', 'jobs', 'describe', FUNCTION_NAME,
             f'--region={region}',
-            '--platform=managed',
             '--format=json'
         ]
         result = subprocess.run(describe_cmd, check=True, capture_output=True, text=True)
