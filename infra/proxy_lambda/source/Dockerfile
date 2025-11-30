@@ -1,5 +1,5 @@
 # filename: infra/proxy_lambda/source/Dockerfile
-FROM python:3.12-bookworm
+FROM gcr.io/google.com/cloudsdktool/cloud-sdk:latest
 
 # Установка Playwright и зависимостей браузеров
 RUN pip install --upgrade pip && \
