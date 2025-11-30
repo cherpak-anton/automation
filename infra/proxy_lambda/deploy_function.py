@@ -23,7 +23,7 @@ def deploy_functions():
         print(f"Deploying function to region: {region}")
         
         command = [
-            'gcloud', 'run', 'jobs', 'create', FUNCTION_NAME,
+            'gcloud', 'run', 'jobs', 'update', FUNCTION_NAME,
             f'--region={region}',
             f'--image={docker_image}',
             '--task-timeout', '1800s',
