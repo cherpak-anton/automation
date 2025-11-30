@@ -25,6 +25,7 @@ steps:
       - "-c"
       - |
         import subprocess
+        import base64
         import json
         import sys
 
@@ -52,7 +53,8 @@ steps:
                 'region': region,
                 'build_id': BUILD_ID
             }))
-            payload_value = f"INPUT_PAYLOAD='{payload}'"
+            b64_str = base64.b64encode(payload.encode('utf-8')).decode('utf-8')
+            payload_value = f"INPUT_PAYLOAD='{b64_str}'"
 
             job_execute_command = [
                 'gcloud', 'run', 'jobs', 'execute', FUNCTION,
