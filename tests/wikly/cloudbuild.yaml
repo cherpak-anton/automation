@@ -29,7 +29,7 @@ steps:
         import sys
 
         REGIONS = ["us-central1"]
-        FUNCTIONS = ["my_function"]
+        FUNCTIONS = ["my-function"]
         BUILD_ID = "${BUILD_ID}"
 
         def execute_command(command_parts, error_msg):
