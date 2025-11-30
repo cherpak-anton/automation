@@ -47,8 +47,8 @@ steps:
                 'gcloud', 'functions', 'deploy', FUNCTION_NAME,
                 '--gen2',
                 f'--region={region}',
-                '--runtime=custom',
-                '--source=.', 
+                f'--image={DOCKER_IMAGE}',
+                f'--entry-point={ENTRY_POINT}',
                 '--trigger-http',
                 '--timeout=600s'
             ]
