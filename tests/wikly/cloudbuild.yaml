@@ -51,8 +51,8 @@ steps:
                 'source': 'gs://qa-test-roidev/tests-wikly/source/',
                 'region': region,
                 'build_id': BUILD_ID
-            })).replace('"', "'")
-            payload_value = f'INPUT_PAYLOAD=payload'
+            }))
+            payload_value = f"INPUT_PAYLOAD='{payload}'"
 
             job_execute_command = [
                 'gcloud', 'run', 'jobs', 'execute', FUNCTION,
