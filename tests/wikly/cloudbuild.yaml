@@ -52,7 +52,7 @@ steps:
                 'region': region,
                 'build_id': BUILD_ID
             }
-            escaped_payload = str(payload)
+            escaped_payload = str(payload).replace("'", '`')
             print(f"Payload (JOB_DATA): {escaped_payload}")
 
             job_execute_command = [
