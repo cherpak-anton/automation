@@ -10,6 +10,7 @@ steps:
         REGIONS = ["us-central1"]        
         FUNCTION_NAME = "my_function"
         DOCKER_IMAGE = "gcr.io/$PROJECT_ID/my_function:latest"
+        RUNTIME = "python311"
         ENTRY_POINT = "main"
         deployed = []
 
