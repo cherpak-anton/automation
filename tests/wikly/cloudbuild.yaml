@@ -37,10 +37,16 @@ steps:
             try:
                 # Run command
                 result = subprocess.run(command, check=True, capture_output=True, text=True)
-                print(str(result))
+                response_json_str = result.stdout.strip()
 
-                response_json = result.stdout.strip()
-                print("response_json", response_json)
+                if not response_json_str:
+                    print("response_json_str пуст. Проверьте, что команда завершилась успешно и вернула JSON.")
+                    # Если команда завершилась успешно, но stdout пуст, проверим stderr на системные сообщения
+                    if result.stderr:
+                        print("Системный вывод (stderr):", result.stderr.strip())
+                    raise Exception("Пустой ответ от gcloud run jobs execute. Не удалось получить Execution ID.")
+
+                response_json = json.loads(response_json_str)
 
                 try: 
                   execution_name = response_json.get('status', {}).get('latestCreatedExecution', {}).get('name')
