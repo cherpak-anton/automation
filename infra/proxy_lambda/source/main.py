@@ -62,7 +62,6 @@ def main():
         return {"status": "error", "message": "internal error", "logs": logs}, 500
 
 
-
 if __name__ == "__main__":
     main()
     log("INFO: Cloud Run Job script finished. Container shutting down.")

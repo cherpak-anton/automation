@@ -16,4 +16,6 @@ COPY . .
 
 RUN if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
 
+ENV PORT=8080
+
 CMD ["python3", "main.py"]

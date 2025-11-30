@@ -27,8 +27,6 @@ def deploy_functions():
             f'--region={region}',
             f'--image={docker_image}',
             '--task-timeout', '1800s',
-            '--startup-probe-type=None',
-            '--liveness-probe-type=None',
             '--command', 'python',
             '--args', 'main.py'
         ]
