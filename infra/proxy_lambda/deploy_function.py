@@ -23,21 +23,19 @@ def deploy_functions():
         print(f"Deploying function to region: {region}")
         
         command = [
-            'gcloud', 'functions', 'deploy', FUNCTION_NAME,
-            '--gen2',
+            'gcloud', 'run', 'deploy', FUNCTION_NAME,
             f'--region={region}',
             f'--image={docker_image}',
-            f'--entry-point={ENTRY_POINT}',
-            '--docker-registry=artifact-registry',
-            '--trigger-http',
-            '--timeout=600s'
+            '--platform=managed',                    
+            '--timeout=600s',
+            '--no-allow-unauthenticated'
         ]
         
         subprocess.run(command, check=True)
         describe_cmd = [
-            'gcloud', 'functions', 'describe', FUNCTION_NAME,
-            '--region', region,
-            '--gen2',
+            'gcloud', 'run', 'services', 'describe', FUNCTION_NAME,
+            f'--region={region}',
+            '--platform=managed',
             '--format=json'
         ]
         result = subprocess.run(describe_cmd, check=True, capture_output=True, text=True)
