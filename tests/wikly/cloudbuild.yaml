@@ -37,12 +37,64 @@ steps:
             try:
                 # Run command
                 result = subprocess.run(command, check=True, capture_output=True, text=True)
-                return result.stdout.strip()
+                response_json = result.stdout.strip()
+                execution_name = response_json.get('status', {}).get('latestCreatedExecution', {}).get('name')
+
+                if not execution_name:
+                    # Это может случиться, если Job завершился слишком быстро или упал при старте
+                    raise Exception("Не удалось получить Execution ID из ответа Cloud Run. Проверьте системные логи.")
+                
+                print("Ответ Cloud Run Job (метаданные запуска):")
+                print(result.stdout.strip())
+                print(f"Execution ID: {execution_name}")
+
+                # 3. Читаем логи для этого выполнения
+                print("\n--- ЛОГИ КОНТЕЙНЕРА (из Cloud Logging) ---")
+                
+                # Фильтр для gcloud logging read
+                log_filter = (
+                    f'resource.type="cloud_run_job" '
+                    f'resource.labels.job_name="{function_name}" '
+                    f'resource.labels.location="{region}" '
+                    f'resource.labels.execution_name="{execution_name}"'
+                )
+
+                # Читаем логи с ограничением в 100 записей
+                log_read_command = [
+                    'gcloud', 'logging', 'read', log_filter,
+                    '--project', PROJECT_ID,
+                    '--limit', '100',
+                    '--format=json' 
+                ]
+                
+                log_result = subprocess.run(log_read_command, check=False, capture_output=True, text=True)
+                
+                # Выводим найденные логи
+                if log_result.stdout:
+                    logs = json.loads(log_result.stdout)
+                    if logs:
+                        print(f"Найдено {len(logs)} записей логов.")
+                        for entry in logs:
+                            # Выводим текст сообщения или JSON-тело
+                            payload = entry.get('textPayload') or entry.get('jsonPayload')
+                            print(f"[{entry.get('timestamp')}] {payload}")
+                    else:
+                        print("Логи не найдены в Cloud Logging для этого Execution ID.")
+                else:
+                    print("Ошибка при чтении логов Gcloud (проверьте права доступа).")
+                
+                return "SUCCESS" # Возвращаем признак успеха
+
             except subprocess.CalledProcessError as e:
-                # Error handling
+                # Критическая ошибка gcloud (например, неверный синтаксис или Job не существует)
                 print("\n❌ Critical error")
-                print(f"Command: {' '.join(command)}")
+                print(f"Command: {' '.join(e.cmd)}")
                 print(f"Stderr: {e.stderr.strip()[:500]}")
+                sys.exit(1)
+
+            except Exception as e:
+                # Ошибка парсинга JSON или другая ошибка
+                print(f"\n❌ Execution/Parsing Error: {e}")
                 sys.exit(1)
 
         for region in REGIONS:
@@ -66,6 +118,7 @@ steps:
             print(f"Вызываем Job. Команда: {' '.join(job_execute_command)}")
 
             response = execute_command(job_execute_command)
+
             
             # Cloud Run execute возвращает метаданные запуска, а не вывод скрипта.
             print("Ответ Cloud Run Job (метаданные запуска):")

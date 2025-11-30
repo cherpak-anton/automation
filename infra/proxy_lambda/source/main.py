@@ -9,19 +9,19 @@ import base64
 
 def get_run_params():
     try:
-        job_data_b64 = os.environ.get('JOB_DATA') 
+        job_data_b64 = os.environ.get('INPUT_PAYLOAD') 
         
         if not job_data_b64:
             data = {} 
-            log("No JOB_DATA found, proceeding with empty data.")
+            log("No INPUT_PAYLOAD found, proceeding with empty data.")
         else:
             job_data_decoded = base64.b64decode(job_data_b64).decode('utf-8')
             
             data = json.loads(job_data_decoded)
-            log(f"Received JOB_DATA: {json.dumps(data)}")
+            log(f"Received INPUT_PAYLOAD: {json.dumps(data)}")
 
     except (json.JSONDecodeError, base64.binascii.Error) as e:
-        log(f"Error: Failed to decode/parse JOB_DATA: {e}")
+        log(f"Error: Failed to decode/parse INPUT_PAYLOAD: {e}")
         sys.exit(1)
 
     return data
