@@ -21,7 +21,6 @@ steps:
                 'gcloud', 'functions', 'deploy', FUNCTION_NAME,
                 '--gen2',
                 f'--region={region}',
-                f'--runtime={RUNTIME}',
                 '--runtime=custom',
                 '--source=infra/proxy_lambda/source/',
                 f'--entry-point={ENTRY_POINT}',
