@@ -1,5 +1,32 @@
 steps:
+  # ---------------------------------------------
+  # (0) Build Docker image with Playwright preinstalled
+  # ---------------------------------------------
+  - name: "gcr.io/cloud-builders/docker"
+    id: Build
+    args:
+      [
+        "build",
+        "-t", "gcr.io/$PROJECT_ID/my_function:latest",
+        "infra/proxy_lambda/source"
+      ]
+
+  # ---------------------------------------------
+  # (1) Пушим Docker-образ в Artifact Registry
+  # ---------------------------------------------
+  - name: "gcr.io/cloud-builders/docker"
+    id: Push
+    args:
+      [
+        "push",
+        "gcr.io/$PROJECT_ID/my_function:latest"
+      ]
+
+  # ---------------------------------------------
+  # (2) Deploy function using custom Docker image
+  # ---------------------------------------------
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk:latest"
+    id: Deploy
     entrypoint: 'python3'
     args:
       - "-c"
@@ -10,7 +37,6 @@ steps:
         REGIONS = ["us-central1"]        
         FUNCTION_NAME = "my_function"
         DOCKER_IMAGE = "gcr.io/$PROJECT_ID/my_function:latest"
-        RUNTIME = "python311"
         ENTRY_POINT = "main"
         deployed = []
 
@@ -21,8 +47,7 @@ steps:
                 'gcloud', 'functions', 'deploy', FUNCTION_NAME,
                 '--gen2',
                 f'--region={region}',
-                '--runtime=custom',
-                '--source=infra/proxy_lambda/source/',
+                f'--image={DOCKER_IMAGE}',
                 f'--entry-point={ENTRY_POINT}',
                 '--trigger-http',
                 '--timeout=600s'
