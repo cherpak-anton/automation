@@ -60,7 +60,7 @@ steps:
             job_execute_command = [
                 'gcloud', 'run', 'jobs', 'execute', FUNCTION,
                 f'--region={region}',
-                '--data', payload, # Передаем JSON как строку в JOB_DATA
+                '--args', payload, # Передаем JSON как строку в JOB_DATA
                 '--wait' # Ожидаем завершения Job
             ]
 
