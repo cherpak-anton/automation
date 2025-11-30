@@ -27,8 +27,6 @@ steps:
         import subprocess
         import json
         import sys
-        import os
-        PAYLOAD_FILE = "/tmp/payload.json"
 
         REGIONS = ["us-central1"]
         FUNCTION = "my-function"
@@ -49,8 +47,6 @@ steps:
         for region in REGIONS:
             print(f"\n--- Начинаем вызов Cloud Run Job {FUNCTION} в регионе {region} ---")
 
-            # Формируем PAYLOAD
-            print("Формируем payload для Job")
             payload = json.dumps({
                 "source": "gs://qa-test-roidev/tests-wikly/source/",
                 "region": region,
@@ -58,13 +54,10 @@ steps:
             })
             print(f"Payload (JOB_DATA): {payload}")
 
-            with open(PAYLOAD_FILE, 'w') as f:
-                json.dump(payload, f)
-
             job_execute_command = [
                 'gcloud', 'run', 'jobs', 'execute', FUNCTION,
                 f'--region={region}',
-                f'--execute-data-file={PAYLOAD_FILE}',
+                f'--set-env-vars=INPUT_PAYLOAD={payload}',
                 '--wait' # Ожидаем завершения Job
             ]
 
