@@ -29,7 +29,7 @@ steps:
         import sys
 
         REGIONS = ["us-central1"]
-        FUNCTIONS = ["my-function"]
+        FUNCTION = "my-function"
         BUILD_ID = "${BUILD_ID}"
 
         def execute_command(command_parts, error_msg):
@@ -43,57 +43,46 @@ steps:
                 sys.exit(1)
 
         for region in REGIONS:
-            for func in FUNCTIONS:
-                print(f"\n--- Начинаем вызов {func} в регионе {region} ---")
+                print(f"\n--- Начинаем вызов Cloud Run Job {job_name} в регионе {region} ---")
 
-                # Получаем URL функции
-                print("Получаем URL функции")
-                URL = execute_command([
-                    'gcloud', 'functions', 'describe', func,
-                    f'--region={region}',
-                    '--gen2',
-                    '--format=value(serviceConfig.uri)'
-                ], f"Не удалось получить URL для {func}")
-                print(f"URL: {URL}")
-
-                # Получаем IAM токен
-                print("Получаем IAM токен")
-                TOKEN = execute_command([
-                    'gcloud', 'auth', 'print-identity-token',
-                    '--audiences', URL
-                ], "Не удалось получить IAM токен")
-
-                # Формируем payload
-                print("Формируем payload")
+                # Формируем PAYLOAD, который будет передан в JOB_DATA
+                print("Формируем payload для Job")
                 payload = json.dumps({
                     "source": "gs://qa-test-roidev/tests-wikly/source/",
                     "region": region,
                     "build_id": BUILD_ID
                 })
-                print(payload)
+                print(f"Payload (JOB_DATA): {payload}")
 
-                # Вызываем функцию и получаем ответ
-                print("Вызываем функцию и получаем ответ")
-                curl_command = [
-                    'curl', '-s', '-X', 'POST', URL,
-                    '-H', f'Authorization: Bearer {TOKEN}',
-                    '-H', 'Content-Type: application/json',
-                    '-d', payload
+                # --- ВЫЗОВ (EXECUTE) CLOUD RUN JOB ---
+                # Используем gcloud run jobs execute, передавая данные через --data
+                
+                job_execute_command = [
+                    'gcloud', 'run', 'jobs', 'execute', job_name,
+                    f'--region={region}',
+                    '--data', payload, # Передаем JSON как строку в JOB_DATA
+                    '--wait' # Ожидаем завершения Job
                 ]
-                response = execute_command(curl_command, f"Вызов функции {func} завершился ошибкой")
+
+                print(f"Вызываем Job. Команда: {' '.join(job_execute_command)}")
+                
+                # Вызываем Job и ожидаем его завершения
+                response = execute_command(job_execute_command, f"Вызов Job {job_name} завершился ошибкой")
+                
+                # Cloud Run execute возвращает метаданные запуска, а не вывод скрипта.
+                print("Ответ Cloud Run Job (метаданные запуска):")
                 print(response)
-
-                # Печатаем ответ в Cloud Build логи
-                print(" Печатаем ответ в Cloud Build логи")
+                
+                # Получаем детали Job (включая имя Execution ID)
                 try:
-                    parsed = json.loads(response)
-                    print("Ответ функции (parsed JSON):")
-                    print(json.dumps(parsed, indent=2))
-                except json.JSONDecodeError:
-                    print("Ответ функции (raw):")
-                    print(response)
+                    # Извлекаем Execution ID из ответа, чтобы получить логи
+                    # (В реальном проекте этот шаг нужен, чтобы найти logs.googleapis.com/run_job)
+                    execution_name = response.split('name: ')[-1].split('\n')[0].strip()
+                    print(f"Execution ID: {execution_name}")
+                except:
+                    pass
 
-                print(f"✅ Успешно вызвано {func} в {region}")
-
+                print(f"✅ Успешно вызвано {job_name} в {region}. Результат в логах Cloud Logging.")
+                
 options:
   logging: CLOUD_LOGGING_ONLY
