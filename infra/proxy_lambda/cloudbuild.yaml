@@ -27,46 +27,15 @@ steps:
   # ---------------------------------------------
   - name: "gcr.io/cloud-builders/gcloud"
     id: Deploy
-    entrypoint: 'python3'
+    entrypoint: 'bash'
     args:
       - "-c"
       - |
-        import subprocess
-        import json
-
-        REGIONS = ["us-central1"]        
-        FUNCTION_NAME = "my_function"
-        DOCKER_IMAGE = "gcr.io/$PROJECT_ID/my_function:latest"
-        ENTRY_POINT = "main"
-        deployed = []
-
-        for region in REGIONS:
-            print(f"Deploying function to region: {region}")
-            
-            command = [
-                'gcloud', 'functions', 'deploy', FUNCTION_NAME,
-                '--gen2',
-                f'--region={region}',
-                f'--image={DOCKER_IMAGE}',
-                f'--entry-point={ENTRY_POINT}',
-                '--trigger-http',
-                '--timeout=600s'
-            ]
-            
-            subprocess.run(command, check=True)
-            describe_cmd = [
-                'gcloud', 'functions', 'describe', FUNCTION_NAME,
-                '--region', region,
-                '--gen2',
-                '--format=json'
-            ]
-            result = subprocess.run(describe_cmd, check=True, capture_output=True, text=True)
-            func_info = json.loads(result.stdout)
-            deployed.append(func_info)
-            print(f"Successfully deployed to {region}")
-
-        with open('/workspace/functions.json', 'w') as f:
-            json.dump(deployed, f)
+        gcloud components update --quiet
+        python3 deploy_function.py
+        
+    env:
+      - 'PROJECT_ID=$PROJECT_ID'
 
 timeout: 1200s
 options:
