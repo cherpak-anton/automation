@@ -37,8 +37,15 @@ steps:
             try:
                 # Run command
                 result = subprocess.run(command, check=True, capture_output=True, text=True)
+                print(str(result))
+
                 response_json = result.stdout.strip()
-                execution_name = response_json.get('status', {}).get('latestCreatedExecution', {}).get('name')
+                print("response_json", response_json)
+
+                try: 
+                  execution_name = response_json.get('status', {}).get('latestCreatedExecution', {}).get('name')
+                except Exception as e:
+                  print("error", e)
 
                 if not execution_name:
                     # Это может случиться, если Job завершился слишком быстро или упал при старте
