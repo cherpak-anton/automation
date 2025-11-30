@@ -25,7 +25,7 @@ steps:
   # ---------------------------------------------
   # (2) Deploy function using custom Docker image
   # ---------------------------------------------
-  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk:latest"
+  - name: "gcr.io/cloud-builders/docker"
     id: Deploy
     entrypoint: 'python3'
     args:
