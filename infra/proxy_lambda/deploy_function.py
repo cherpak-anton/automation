@@ -26,9 +26,9 @@ def deploy_functions():
             'gcloud', 'functions', 'deploy', FUNCTION_NAME,
             '--gen2',
             f'--region={region}',
-            '--runtime=custom',
-            f'--docker-registry={docker_image}',
+            f'--image={docker_image}',
             f'--entry-point={ENTRY_POINT}',
+            '--docker-registry=artifact-registry',
             '--trigger-http',
             '--timeout=600s'
         ]
