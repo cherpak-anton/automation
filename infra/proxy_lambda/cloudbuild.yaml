@@ -32,8 +32,8 @@ steps:
       - "-c"
       - |
         gcloud components update --quiet
-        python3 deploy_function.py
-        
+        python3 infra/proxy_lambda/deploy_function.py
+
     env:
       - 'PROJECT_ID=$PROJECT_ID'
 
