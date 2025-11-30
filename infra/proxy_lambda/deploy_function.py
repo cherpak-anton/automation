@@ -21,9 +21,23 @@ def deploy_functions():
 
     for region in REGIONS:
         print(f"Deploying function to region: {region}")
+
+        check_cmd = [
+            'gcloud', 'run', 'jobs', 'describe', FUNCTION_NAME,
+            f'--region={region}',
+            '--format=disable',
+        ]
+        check_result = subprocess.run(check_cmd, check=False, capture_output=True)
+
+        if check_result.returncode == 0:
+            operation = 'update'
+            print(f"Job {FUNCTION_NAME} существует. Обновляем...")
+        else:
+            operation = 'deploy'
+            print(f"Job {FUNCTION_NAME} не найден. Создаем (deploy)...")
         
         command = [
-            'gcloud', 'run', 'jobs', 'update', FUNCTION_NAME,
+            'gcloud', 'run', 'jobs', operation, FUNCTION_NAME,
             f'--region={region}',
             f'--image={docker_image}',
             '--task-timeout', '1800s',

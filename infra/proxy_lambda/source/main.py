@@ -5,20 +5,23 @@ from runner.executor import run_python_project
 import tempfile, shutil, json, traceback
 import os 
 import sys 
+import base64
 
 def get_run_params():
     try:
-        job_data_json = os.environ.get('JOB_DATA')
+        job_data_b64 = os.environ.get('JOB_DATA') 
         
-        if not job_data_json:
+        if not job_data_b64:
             data = {} 
             log("No JOB_DATA found, proceeding with empty data.")
         else:
-            data = json.loads(job_data_json)
+            job_data_decoded = base64.b64decode(job_data_b64).decode('utf-8')
+            
+            data = json.loads(job_data_decoded)
             log(f"Received JOB_DATA: {json.dumps(data)}")
 
-    except json.JSONDecodeError:
-        log("Error: Failed to decode JOB_DATA JSON.")
+    except (json.JSONDecodeError, base64.binascii.Error) as e:
+        log(f"Error: Failed to decode/parse JOB_DATA: {e}")
         sys.exit(1)
 
     return data
