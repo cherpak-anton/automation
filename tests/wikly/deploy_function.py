@@ -7,24 +7,11 @@ REGIONS = ["us-central1"]
 FUNCTION = "my-function"
 BUILD_ID = "${BUILD_ID}"
 
-def execute_command(command):
-    try:
-        # Run command
-        result = subprocess.run(command, check=True, capture_output=True, text=True)
-        response_json_str = result.stdout.strip()
-        print("response_json_str", response_json_str)
-
-        if not response_json_str:
-            print("response_json_str пуст. Проверьте, что команда завершилась успешно и вернула JSON.")
-            # Если команда завершилась успешно, но stdout пуст, проверим stderr на системные сообщения
-            if result.stderr:
-                print("Системный вывод (stderr):", result.stderr.strip())
-            raise Exception("Пустой ответ от gcloud run jobs execute. Не удалось получить Execution ID.")
-
+def get_execution_logs(response_json_str):       
         response_json = json.loads(response_json_str)
 
         try: 
-            execution_name = response_json.get('status', {}).get('latestCreatedExecution', {}).get('name')
+            execution_name = response_json.get('metadata', {}).get('name')
         except Exception as e:
             print("error", e)
 
@@ -73,6 +60,23 @@ def execute_command(command):
         
         return "SUCCESS" # Возвращаем признак успеха
 
+
+def execute_command(command):
+    try:
+        # Run command
+        result = subprocess.run(command, check=True, capture_output=True, text=True)
+        response_json_str = result.stdout.strip()
+        print("response_json_str", response_json_str)
+
+        if not response_json_str:
+            print("response_json_str пуст. Проверьте, что команда завершилась успешно и вернула JSON.")
+            # Если команда завершилась успешно, но stdout пуст, проверим stderr на системные сообщения
+            if result.stderr:
+                print("Системный вывод (stderr):", result.stderr.strip())
+            raise Exception("Пустой ответ от gcloud run jobs execute. Не удалось получить Execution ID.")
+
+        return get_execution_logs(response_json_str)
+
     except subprocess.CalledProcessError as e:
         # Критическая ошибка gcloud (например, неверный синтаксис или Job не существует)
         print("\n❌ Critical error")
@@ -84,7 +88,6 @@ def execute_command(command):
         # Ошибка парсинга JSON или другая ошибка
         print(f"\n❌ Execution/Parsing Error: {e}")
         sys.exit(1)
-
 
 def main(build_id):
     for region in REGIONS:
@@ -109,7 +112,6 @@ def main(build_id):
         print(f"Вызываем Job. Команда: {' '.join(job_execute_command)}")
         execute_command(job_execute_command)
         print(f"✅ Успешно вызвано {FUNCTION} в {region}. Результат в логах Cloud Logging.")
-
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
