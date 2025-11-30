@@ -26,8 +26,8 @@ def deploy_functions():
             'gcloud', 'run', 'jobs', 'create', FUNCTION_NAME,
             f'--region={region}',
             f'--image={docker_image}',
-            '--platform=managed',                    
-            '--timeout=600s',
+            # '--platform=managed',                    
+            '--task-timeout', '1800s',
             '--command', 'python',
             '--args', 'main.py'
         ]
