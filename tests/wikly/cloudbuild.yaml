@@ -43,46 +43,46 @@ steps:
                 sys.exit(1)
 
         for region in REGIONS:
-                print(f"\n--- Начинаем вызов Cloud Run Job {job_name} в регионе {region} ---")
+            print(f"\n--- Начинаем вызов Cloud Run Job {FUNCTION} в регионе {region} ---")
 
-                # Формируем PAYLOAD, который будет передан в JOB_DATA
-                print("Формируем payload для Job")
-                payload = json.dumps({
-                    "source": "gs://qa-test-roidev/tests-wikly/source/",
-                    "region": region,
-                    "build_id": BUILD_ID
-                })
-                print(f"Payload (JOB_DATA): {payload}")
+            # Формируем PAYLOAD, который будет передан в JOB_DATA
+            print("Формируем payload для Job")
+            payload = json.dumps({
+                "source": "gs://qa-test-roidev/tests-wikly/source/",
+                "region": region,
+                "build_id": BUILD_ID
+            })
+            print(f"Payload (JOB_DATA): {payload}")
 
-                # --- ВЫЗОВ (EXECUTE) CLOUD RUN JOB ---
-                # Используем gcloud run jobs execute, передавая данные через --data
-                
-                job_execute_command = [
-                    'gcloud', 'run', 'jobs', 'execute', job_name,
-                    f'--region={region}',
-                    '--data', payload, # Передаем JSON как строку в JOB_DATA
-                    '--wait' # Ожидаем завершения Job
-                ]
+            # --- ВЫЗОВ (EXECUTE) CLOUD RUN JOB ---
+            # Используем gcloud run jobs execute, передавая данные через --data
+            
+            job_execute_command = [
+                'gcloud', 'run', 'jobs', 'execute', FUNCTION,
+                f'--region={region}',
+                '--data', payload, # Передаем JSON как строку в JOB_DATA
+                '--wait' # Ожидаем завершения Job
+            ]
 
-                print(f"Вызываем Job. Команда: {' '.join(job_execute_command)}")
-                
-                # Вызываем Job и ожидаем его завершения
-                response = execute_command(job_execute_command, f"Вызов Job {job_name} завершился ошибкой")
-                
-                # Cloud Run execute возвращает метаданные запуска, а не вывод скрипта.
-                print("Ответ Cloud Run Job (метаданные запуска):")
-                print(response)
-                
-                # Получаем детали Job (включая имя Execution ID)
-                try:
-                    # Извлекаем Execution ID из ответа, чтобы получить логи
-                    # (В реальном проекте этот шаг нужен, чтобы найти logs.googleapis.com/run_job)
-                    execution_name = response.split('name: ')[-1].split('\n')[0].strip()
-                    print(f"Execution ID: {execution_name}")
-                except:
-                    pass
+            print(f"Вызываем Job. Команда: {' '.join(job_execute_command)}")
+            
+            # Вызываем Job и ожидаем его завершения
+            response = execute_command(job_execute_command, f"Вызов Job {FUNCTION} завершился ошибкой")
+            
+            # Cloud Run execute возвращает метаданные запуска, а не вывод скрипта.
+            print("Ответ Cloud Run Job (метаданные запуска):")
+            print(response)
+            
+            # Получаем детали Job (включая имя Execution ID)
+            try:
+                # Извлекаем Execution ID из ответа, чтобы получить логи
+                # (В реальном проекте этот шаг нужен, чтобы найти logs.googleapis.com/run_job)
+                execution_name = response.split('name: ')[-1].split('\n')[0].strip()
+                print(f"Execution ID: {execution_name}")
+            except:
+                pass
 
-                print(f"✅ Успешно вызвано {job_name} в {region}. Результат в логах Cloud Logging.")
-                
+            print(f"✅ Успешно вызвано {FUNCTION} в {region}. Результат в логах Cloud Logging.")
+
 options:
   logging: CLOUD_LOGGING_ONLY
