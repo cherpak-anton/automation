@@ -58,7 +58,7 @@ steps:
             job_execute_command = [
                 'gcloud', 'run', 'jobs', 'execute', FUNCTION,
                 f'--region={region}',
-                f'--update-env-vars=INPUT_PAYLOAD={escaped_payload}',
+                f'--update-env-vars="INPUT_PAYLOAD={escaped_payload}"',
                 '--wait' # Ожидаем завершения Job
             ]
 
