@@ -52,7 +52,7 @@ steps:
                 'region': region,
                 'build_id': BUILD_ID
             })
-            payload_value = f'INPUT_PAYLOAD={payload}'
+            payload_value = f'INPUT_PAYLOAD={payload.response('"', "'")}'
 
             job_execute_command = [
                 'gcloud', 'run', 'jobs', 'execute', FUNCTION,
