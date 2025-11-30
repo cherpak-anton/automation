@@ -5,7 +5,7 @@ import os
 import sys
 
 REGIONS = ["us-central1"]        
-FUNCTION_NAME = "my_function"
+FUNCTION_NAME = "my-function"
 ENTRY_POINT = "main"
 
 def deploy_functions():
