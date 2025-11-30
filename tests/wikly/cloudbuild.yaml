@@ -51,7 +51,7 @@ steps:
                 'source': 'gs://qa-test-roidev/tests-wikly/source/',
                 'region': region,
                 'build_id': BUILD_ID
-            })).response('"', "'")
+            })).replace('"', "'")
             payload_value = f'INPUT_PAYLOAD={payload}'
 
             job_execute_command = [
