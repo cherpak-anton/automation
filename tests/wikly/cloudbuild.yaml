@@ -2,7 +2,7 @@ steps:
   # ---------------------------------------------
   # (0) Copy source/ to GCS before calling functions
   # ---------------------------------------------
-  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk:latest"
+  - name: "gcr.io/cloud-builders/gcloud"
     entrypoint: bash
     args:
       - -c
@@ -19,7 +19,7 @@ steps:
   # ---------------------------------------------
   # (1) Your original function-invocation step
   # ---------------------------------------------
-  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk:latest"
+  - name: "gcr.io/cloud-builders/gcloud"
     entrypoint: 'python3'
     args:
       - "-c"
@@ -57,7 +57,7 @@ steps:
             job_execute_command = [
                 'gcloud', 'run', 'jobs', 'execute', FUNCTION,
                 f'--region={region}',
-                f'--set-env-vars=INPUT_PAYLOAD={payload}',
+                f'--update-env-vars=INPUT_PAYLOAD={payload}',
                 '--wait' # Ожидаем завершения Job
             ]
 
