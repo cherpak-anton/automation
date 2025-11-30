@@ -32,20 +32,22 @@ steps:
         FUNCTION = "my-function"
         BUILD_ID = "${BUILD_ID}"
 
-        def execute_command(command_parts, error_msg):
+        def execute_command(command):
             try:
-                result = subprocess.run(command_parts, check=True, capture_output=True, text=True)
+                # Run command
+                result = subprocess.run(command, check=True, capture_output=True, text=True)
                 return result.stdout.strip()
             except subprocess.CalledProcessError as e:
-                print(f"\n❌ Критическая ошибка: {error_msg}")
-                print(f"Команда: {' '.join(command_parts)}")
+                # Error handling
+                print("\n❌ Critical error")
+                print(f"Command: {' '.join(command)}")
                 print(f"Stderr: {e.stderr.strip()[:500]}")
                 sys.exit(1)
 
         for region in REGIONS:
             print(f"\n--- Начинаем вызов Cloud Run Job {FUNCTION} в регионе {region} ---")
 
-            # Формируем PAYLOAD, который будет передан в JOB_DATA
+            # Формируем PAYLOAD
             print("Формируем payload для Job")
             payload = json.dumps({
                 "source": "gs://qa-test-roidev/tests-wikly/source/",
@@ -54,20 +56,16 @@ steps:
             })
             print(f"Payload (JOB_DATA): {payload}")
 
-            # --- ВЫЗОВ (EXECUTE) CLOUD RUN JOB ---
-            # Используем gcloud run jobs execute, передавая данные через --data
-            
             job_execute_command = [
                 'gcloud', 'run', 'jobs', 'execute', FUNCTION,
                 f'--region={region}',
-                '--args', payload, # Передаем JSON как строку в JOB_DATA
+                '--execute-data-file', payload, # Передаем JSON как строку
                 '--wait' # Ожидаем завершения Job
             ]
 
             print(f"Вызываем Job. Команда: {' '.join(job_execute_command)}")
-            
-            # Вызываем Job и ожидаем его завершения
-            response = execute_command(job_execute_command, f"Вызов Job {FUNCTION} завершился ошибкой")
+
+            response = execute_command(job_execute_command)
             
             # Cloud Run execute возвращает метаданные запуска, а не вывод скрипта.
             print("Ответ Cloud Run Job (метаданные запуска):")
