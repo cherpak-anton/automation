@@ -47,12 +47,12 @@ steps:
         for region in REGIONS:
             print(f"\n--- Начинаем вызов Cloud Run Job {FUNCTION} в регионе {region} ---")
 
-            payload = json.dumps({
+            payload = str(json.dumps({
                 'source': 'gs://qa-test-roidev/tests-wikly/source/',
                 'region': region,
                 'build_id': BUILD_ID
-            })
-            payload_value = f'INPUT_PAYLOAD={payload.response('"', "'")}'
+            })).response('"', "'")
+            payload_value = f'INPUT_PAYLOAD={payload}'
 
             job_execute_command = [
                 'gcloud', 'run', 'jobs', 'execute', FUNCTION,
