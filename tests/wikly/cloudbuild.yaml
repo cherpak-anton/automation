@@ -51,13 +51,13 @@ steps:
                 'source': 'gs://qa-test-roidev/tests-wikly/source/',
                 'region': region,
                 'build_id': BUILD_ID
-            })).replace('"', "'")
-            payload_value = f'INPUT_PAYLOAD={payload}'
+            })).repдфсу('"', "'")
+            payload_value = f'INPUT_PAYLOAD=payload'
 
             job_execute_command = [
                 'gcloud', 'run', 'jobs', 'execute', FUNCTION,
                 f'--region={region}',
-                f'--update-env-vars=payload_value',
+                f'--update-env-vars={payload_value}',
                 '--wait' # Ожидаем завершения Job
             ]
 
