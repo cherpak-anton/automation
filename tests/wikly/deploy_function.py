@@ -37,7 +37,7 @@ def get_execution_logs(response_json_str, region, project_id):
         '--format=json' 
     ]
 
-    for _ in range(10):
+    for _ in range(20):
         print("waiting for log", datetime.datetime.now())
         time.sleep(5)
         log_result = subprocess.run(log_read_command, check=False, capture_output=True, text=True)
