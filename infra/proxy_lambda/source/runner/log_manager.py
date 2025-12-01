@@ -9,10 +9,11 @@ class Logger:
 
     def log(self, text: str):
         """Write to file, store in memory, print."""
-        timestamp = datetime.datetime.utcnow().isoformat()
-        line = f"[{timestamp}] {text}"
+        # timestamp = datetime.datetime.utcnow().isoformat()
+        # line = f"[{timestamp}] {text}"
 
-        self.buffer.append(line)
+        # self.buffer.append(line)
+        self.buffer.append(text)
 
         with open(self.logfile, "a") as f:
             f.write(line + "\n")

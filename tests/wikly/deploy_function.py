@@ -32,6 +32,7 @@ def get_execution_logs(response_json_str, region, project_id):
         "--limit=1000",
         '--format=json' 
     ]
+    time.sleep(15)
 
     for _ in range(20):
         print("waiting for log", datetime.datetime.now())
