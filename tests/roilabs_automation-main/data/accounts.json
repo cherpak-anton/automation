@@ -1,0 +1,31 @@
+{
+  "Palmslots": {
+    "Germany": { "username": "Germany_1", "password": "RL123456" },
+    "Austria": { "username": "Austria_1", "password": "RL123456" },
+    "Italy": { "username": "Italy_1", "password": "RL123456" },
+    "Spain": { "username": "Spain_1", "password": "RL123456" },
+    "Sweden": { "username": "Sweden_1", "password": "RL123456" },
+    "UAE": { "username": "Arabic_2", "password": "RL123456" }
+  },
+  "Rollino": {
+    "Germany": { "username": "2@test.com", "password": "RL123456" },
+    "Austria": { "username": "3@test.com", "password": "RL123456" },
+    "UK": { "username": "1@test.com", "password": "RL123456" },
+    "Italy": { "username": "12@test.com", "password": "RL123456" },
+    "Sweden": { "username": "24@test.com", "password": "RL123456" }
+  },
+  "Casinojoy": {
+    "Germany": { "username": "2@test.com", "password": "RL123456" },
+    "Austria": { "username": "9@test.com", "password": "RL123456" },
+    "UK": { "username": "1@test.com", "password": "RL123456" },
+    "Italy": { "username": "15@test.com", "password": "RL123456" },
+    "Sweden": { "username": "23@test.com", "password": "RL123456" }
+  },
+  "Jettbet": {
+    "Germany": { "username": "2@test.com", "password": "RL123456" },
+    "Austria": { "username": "10@test.com", "password": "RL123456" },
+    "UK": { "username": "1@test.com", "password": "RL123456" },
+    "Sweden": { "username": "24@test.com", "password": "RL123456" },
+    "Italy": { "username": "16@test.com", "password": "RL123456" }
+  }
+}

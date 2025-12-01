@@ -4,7 +4,7 @@ import json
 import os
 import sys
 
-REGIONS = ["us-central1"]        
+REGIONS = ["us-central1", "europe-west2"]        
 FUNCTION_NAME = "my-function"
 ENTRY_POINT = "main"
 

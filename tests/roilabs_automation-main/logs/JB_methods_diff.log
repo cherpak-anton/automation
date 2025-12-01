@@ -1,0 +1,710 @@
+
+=== Date of checking: 2025-11-27 10:55:10 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-25 17:56:49 ===
+
+Country: Austria
+  Deposit Methods:
+    Removed:
+      - Utorg Revolut (https://altacdn.com/jb/img/paysystems/pp_logo_revlt-white.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    Removed:
+      - Utorg Revolut IT (https://altacdn.com/jb/img/paysystems/pp_logo_revlt-white.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-19 00:38:20 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-14 16:11:44 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-14 15:48:28 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-13 18:00:05 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-13 17:46:32 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-13 10:29:38 ===
+
+Country: Italy
+  Deposit Methods:
+    Added:
+      + Corefy Sepa Toda (https://altacdn.com/jb/img/paysystems/pp_logo_payleropenbankinginstant-white.svg)
+    Removed:
+      - Noda – Italy (https://altacdn.com/jb/img/paysystems/pp_logo_it2-white.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    Added:
+      + Rillpay UK (https://altacdn.com/jb/img/paysystems/pp_logo_rillpay_en-dark.svg)
+    Removed:
+      - Rillpay UK (https://altacdn.com/jb/img/paysystems/pp_logo-banktransfer-dark.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-13 10:28:23 ===
+
+Country: Austria
+  Deposit Methods:
+    Removed:
+      - Noda Austria (https://altacdn.com/jb/img/paysystems/pp_logo_at-white.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    Added:
+      + Flexepin DE (https://altacdn.com/jb/img/paysystems/pp_logo-flexepin-dark.svg)
+    Removed:
+      - Flexepin DE (https://altacdn.com/jb/img/paysystems/pp_logo-flexepin-light.svg)
+      - Noda DE (https://altacdn.com/jb/img/paysystems/pp_logo_de-dark.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-09 18:18:37 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-09 18:00:38 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-09 16:32:53 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-09 15:06:00 ===
+
+Country: Austria
+  Deposit Methods:
+    Added:
+      + Corefy Sepa Toda (https://altacdn.com/jb/img/paysystems/pp_logo_payleropenbankinginstant-white.svg)
+      + Utorg Openbanking (https://altacdn.com/jb/img/paysystems/pp_logo_banktransfer4-white.svg)
+    Removed:
+      - Noda Austria (https://altacdn.com/jb/img/paysystems/pp_logo_at-white.svg)
+      - Utorg Openbanking (https://altacdn.com/jb/img/paysystems/pp_logo-banktransfer4-dark.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    Added:
+      + Corefy Sepa Toda (https://altacdn.com/jb/img/paysystems/pp_logo_payleropenbankinginstant-white.svg)
+    Removed:
+      - Noda DE (https://altacdn.com/jb/img/paysystems/pp_logo_de-dark.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    Added:
+      + Corefy Sepa Toda (https://altacdn.com/jb/img/paysystems/pp_logo_payleropenbankinginstant-white.svg)
+      + Utorg Openbanking (https://altacdn.com/jb/img/paysystems/pp_logo_banktransfer4-white.svg)
+    Removed:
+      - Noda – Italy (https://altacdn.com/jb/img/paysystems/pp_logo_it2-white.svg)
+      - Utorg Openbanking (https://altacdn.com/jb/img/paysystems/pp_logo-banktransfer4-dark.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    Added:
+      + Corefy Sepa Toda (https://altacdn.com/jb/img/paysystems/pp_logo_payleropenbankinginstant-white.svg)
+      + Corefy SE (https://altacdn.com/jb/img/paysystems/pp_logo-visamc-white.svg)
+    Removed:
+      - Corefy SE (https://altacdn.com/jb/img/paysystems/pp_logo-visamc-dark.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    Added:
+      + Rillpay UK (https://altacdn.com/jb/img/paysystems/pp_logo_rillpay_en-dark.svg)
+    Removed:
+      - Rillpay UK (https://altacdn.com/jb/img/paysystems/pp_logo-banktransfer-dark.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-09 12:51:33 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    Added:
+      + Corefy Sepa Toda (https://altacdn.com/jb/img/paysystems/pp_logo_payleropenbankinginstant-white.svg)
+      + Utorg Openbanking (https://altacdn.com/jb/img/paysystems/pp_logo_banktransfer4-white.svg)
+    Removed:
+      - Noda – Italy (https://altacdn.com/jb/img/paysystems/pp_logo_it2-white.svg)
+      - Utorg Openbanking (https://altacdn.com/jb/img/paysystems/pp_logo-banktransfer4-dark.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    Added:
+      + Corefy Sepa Toda (https://altacdn.com/jb/img/paysystems/pp_logo_payleropenbankinginstant-white.svg)
+      + Corefy SE (https://altacdn.com/jb/img/paysystems/pp_logo-visamc-white.svg)
+    Removed:
+      - Corefy SE (https://altacdn.com/jb/img/paysystems/pp_logo-visamc-dark.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    Added:
+      + Rillpay UK (https://altacdn.com/jb/img/paysystems/pp_logo_rillpay_en-dark.svg)
+    Removed:
+      - Rillpay UK (https://altacdn.com/jb/img/paysystems/pp_logo-banktransfer-dark.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-08 21:07:00 ===
+
+Country: Austria
+  Deposit Methods:
+    Added:
+      + Corefy Sepa Toda (https://altacdn.com/jb/img/paysystems/pp_logo_payleropenbankinginstant-white.svg)
+      + Utorg Openbanking (https://altacdn.com/jb/img/paysystems/pp_logo_banktransfer4-white.svg)
+      + ByBit Pay (https://altacdn.com/jb/img/paysystems/pp_logo_bybitpay-white.svg)
+      + Bitcoin (https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg)
+    Removed:
+      - Noda Austria (https://altacdn.com/jb/img/paysystems/pp_logo_at-white.svg)
+      - Utorg Openbanking (https://altacdn.com/jb/img/paysystems/pp_logo-banktransfer4-dark.svg)
+  Withdrawal Methods:
+    Added:
+      + Noda (Withdrawal) (https://altacdn.com/jb/img/paysystems/pp_logo_banktransfer2-light.svg)
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    Added:
+      + Corefy Sepa Toda (https://altacdn.com/jb/img/paysystems/pp_logo_payleropenbankinginstant-white.svg)
+      + Corefy DE (https://altacdn.com/jb/img/paysystems/pp_logo-visamc-white.svg)
+    Removed:
+      - Corefy DE (https://altacdn.com/jb/img/paysystems/pp_logo-visamc-white.svg ssdgsdgsdg)
+      - Noda DE (https://altacdn.com/jb/img/paysystems/pp_logo_de-dark.svg)
+  Withdrawal Methods:
+    Added:
+      + Tron (https://altacdn.com/jb/img/paysystems/pp_logo-tron-light.svg)
+    Removed:
+      - Tron (https://altacdn.com/jb/img/paysystems/pp_logo-tron-light.svg sdgsdgsdgsdg)
+----------------------------------------
+
+
+=== Date of checking: 2025-11-05 10:41:49 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Norway
+  Deposit Methods:
+    Added:
+      + Corefy NO (https://altacdn.com/jb/img/paysystems/pp_logo-visamc-dark.svg)
+      + Utorg paysafecard (https://altacdn.com/jb/img/paysystems/pp_logo_chainvalleypscrd-white.svg)
+      + Mifinity NO (https://altacdn.com/jb/img/paysystems/pp_logo_mifinity-light.svg)
+      + Utorg neteller (https://altacdn.com/jb/img/paysystems/pp_logo_chainvalleyntlr-white.svg)
+      + Utorg skrill (https://altacdn.com/jb/img/paysystems/pp_logo_chainvalleyskrl-white.svg)
+      + Binance Pay (https://altacdn.com/jb/img/paysystems/pp_logo_binancepay-light.svg)
+      + ByBit Pay (https://altacdn.com/jb/img/paysystems/pp_logo_bybitpay-white.svg)
+      + Tether (https://altacdn.com/jb/img/paysystems/pp_logo_tethertrc20-light-1.svg)
+      + Ethereum (https://altacdn.com/jb/img/paysystems/pp_logo-ethereum-white.svg)
+      + Bitcoin (https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg)
+      + Litecoin (https://altacdn.com/jb/img/paysystems/pp_logo-litecoin-light-1.svg)
+  Withdrawal Methods:
+    Added:
+      + Mifinity NO (https://altacdn.com/jb/img/paysystems/pp_logo_mifinity-dark-2.svg)
+      + Mifinity pab (https://altacdn.com/jb/img/paysystems/pp_logo-banktransfer-light.svg)
+      + Tether (https://altacdn.com/jb/img/paysystems/pp_logo_tethertrc20-light-1.svg)
+      + Ethereum (https://altacdn.com/jb/img/paysystems/pp_logo-ethereum-white.svg)
+      + Tron (https://altacdn.com/jb/img/paysystems/pp_logo-tron-light.svg)
+      + Bitcoin (https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg)
+      + Litecoin (https://altacdn.com/jb/img/paysystems/pp_logo-litecoin-light-1.svg)
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-05 10:18:20 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-05 10:07:08 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-05 09:55:41 ===
+
+Country: Austria
+  Deposit Methods:
+    Added:
+      + Utorg Openbanking (https://altacdn.com/jb/img/paysystems/pp_logo-banktransfer4-dark.svg)
+      + Utorg neteller AT (https://altacdn.com/jb/img/paysystems/pp_logo_chainvalleyntlr-white.svg)
+      + ByBit Pay (https://altacdn.com/jb/img/paysystems/pp_logo_bybitpay-white.svg)
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    Added:
+      + Noda (Withdrawal) DE (https://altacdn.com/jb/img/paysystems/pp_logo_banktransfer2-light.svg)
+      + Bitcoin (https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg)
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+
+
+=== Date of checking: 2025-11-05 09:52:59 ===
+
+Country: Austria
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Germany
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Italy
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: Sweden
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+Country: UK
+  Deposit Methods:
+    No changes.
+  Withdrawal Methods:
+    No changes.
+----------------------------------------
+

@@ -1,0 +1,2419 @@
+{
+  "projects": [
+    {
+      "project": "Palmslots",
+      "countries": [
+        {
+          "country": "Austria",
+          "payment_methods": [
+            {
+              "payment_method": "Visa",
+              "html_anchor": "PCI_WORLDCARD-VISA_S2S-Visa",
+              "timestamp": "2025-11-25 17:57:12"
+            },
+            {
+              "payment_method": "Mastercard",
+              "html_anchor": "PCI_WORLDCARD-MASTERCARD_S2S-Mastercard",
+              "timestamp": "2025-11-25 17:57:12"
+            },
+            {
+              "payment_method": "PaySafeCard",
+              "html_anchor": "SKRILL-PAYSAFECARD-PaySafeCard",
+              "timestamp": "2025-11-25 17:57:12"
+            },
+            {
+              "payment_method": "Skrill",
+              "html_anchor": "SKRILL-WALLET_SKRILL-Skrill ",
+              "timestamp": "2025-11-25 17:57:12"
+            },
+            {
+              "payment_method": "RPDT",
+              "html_anchor": "UTORG-RAPID-RPDT",
+              "timestamp": "2025-11-25 17:57:12"
+            },
+            {
+              "payment_method": "Überweisung",
+              "html_anchor": "SEPAGON-OPEN_BANKING-Überweisung",
+              "timestamp": "2025-11-25 17:57:12"
+            },
+            {
+              "payment_method": "MiFinity",
+              "html_anchor": "MIFINITY-WALLET_MIFINITY-MiFinity",
+              "timestamp": "2025-11-25 17:57:12"
+            },
+            {
+              "payment_method": "Crypto",
+              "html_anchor": "FINRAX-CRYPTO-Crypto",
+              "timestamp": "2025-11-25 17:57:12"
+            },
+            {
+              "payment_method": "BinancePay",
+              "html_anchor": "AETEREDGE-BINANCEPAY-BinancePay",
+              "timestamp": "2025-11-25 17:57:12"
+            },
+            {
+              "payment_method": "NTLR",
+              "html_anchor": "UTORG-WALLET_NETELLER-NTLR",
+              "timestamp": "2025-11-25 17:57:12"
+            },
+            {
+              "payment_method": "WebPayz",
+              "html_anchor": "WEBPAYZ-WEBPAYZ-WebPayz",
+              "timestamp": "2025-11-25 17:57:12"
+            }
+          ]
+        },
+        {
+          "country": "Germany",
+          "payment_methods": [
+            {
+              "payment_method": "Banküberweisung",
+              "html_anchor": "GATEIQ-BANK_TRANSFER-Banküberweisung",
+              "timestamp": "2025-11-25 17:57:01"
+            },
+            {
+              "payment_method": "Banküberweisung",
+              "html_anchor": "DAFTCODE-ONRAMP-Banküberweisung",
+              "timestamp": "2025-11-25 17:57:01"
+            },
+            {
+              "payment_method": "E-Voucher",
+              "html_anchor": "CASHLIB-EVOUCHER-E-Voucher",
+              "timestamp": "2025-11-25 17:57:01"
+            },
+            {
+              "payment_method": "Flexepin",
+              "html_anchor": "FLEXEPIN-EVOUCHER-Flexepin",
+              "timestamp": "2025-11-25 17:57:01"
+            },
+            {
+              "payment_method": "Visa",
+              "html_anchor": "PCI_WORLDCARD-VISA_S2S-Visa",
+              "timestamp": "2025-11-25 17:57:01"
+            },
+            {
+              "payment_method": "Mastercard",
+              "html_anchor": "PCI_WORLDCARD-MASTERCARD_S2S-Mastercard",
+              "timestamp": "2025-11-25 17:57:01"
+            },
+            {
+              "payment_method": "Google Pay",
+              "html_anchor": "DNS-GOOGLEPAY-Google Pay",
+              "timestamp": "2025-11-25 17:57:01"
+            },
+            {
+              "payment_method": "Crypto",
+              "html_anchor": "FINRAX-CRYPTO-Crypto",
+              "timestamp": "2025-11-25 17:57:01"
+            },
+            {
+              "payment_method": "BinancePay",
+              "html_anchor": "AETEREDGE-BINANCEPAY-BinancePay",
+              "timestamp": "2025-11-25 17:57:01"
+            }
+          ]
+        },
+        {
+          "country": "Italy",
+          "payment_methods": [
+            {
+              "payment_method": "Google Pay",
+              "html_anchor": "DNS-GOOGLEPAY-Google Pay",
+              "timestamp": "2025-11-25 17:57:23"
+            },
+            {
+              "payment_method": "Postepay",
+              "html_anchor": "PCI_WORLDCARD-CARD_S2S-Postepay",
+              "timestamp": "2025-11-25 17:57:23"
+            },
+            {
+              "payment_method": "Visa",
+              "html_anchor": "PCI_WORLDCARD-VISA_S2S-Visa",
+              "timestamp": "2025-11-25 17:57:23"
+            },
+            {
+              "payment_method": "Mastercard",
+              "html_anchor": "PCI_WORLDCARD-MASTERCARD_S2S-Mastercard",
+              "timestamp": "2025-11-25 17:57:23"
+            },
+            {
+              "payment_method": "Maestro",
+              "html_anchor": "PCI_SAFECHARGE-MAESTRO_S2S-Maestro",
+              "timestamp": "2025-11-25 17:57:23"
+            },
+            {
+              "payment_method": "Revolut",
+              "html_anchor": "UTORG-REVOLUT-Revolut",
+              "timestamp": "2025-11-25 17:57:23"
+            },
+            {
+              "payment_method": "Open Banking",
+              "html_anchor": "PAYWITHCLICK-OPEN_BANKING-Open Banking",
+              "timestamp": "2025-11-25 17:57:23"
+            },
+            {
+              "payment_method": "PSCD",
+              "html_anchor": "UTORG-PAYSAFECARD-PSCD",
+              "timestamp": "2025-11-25 17:57:23"
+            },
+            {
+              "payment_method": "Crypto",
+              "html_anchor": "FINRAX-CRYPTO-Crypto",
+              "timestamp": "2025-11-25 17:57:23"
+            },
+            {
+              "payment_method": "BinancePay",
+              "html_anchor": "AETEREDGE-BINANCEPAY-BinancePay",
+              "timestamp": "2025-11-25 17:57:23"
+            },
+            {
+              "payment_method": "SKRL",
+              "html_anchor": "UTORG-WALLET_SKRILL-SKRL",
+              "timestamp": "2025-11-25 17:57:23"
+            }
+          ]
+        },
+        {
+          "country": "Spain",
+          "payment_methods": [
+            {
+              "payment_method": "Visa",
+              "html_anchor": "PCI_WORLDCARD-VISA_S2S-Visa",
+              "timestamp": "2025-11-25 17:57:33"
+            },
+            {
+              "payment_method": "Mastercard",
+              "html_anchor": "PCI_WORLDCARD-MASTERCARD_S2S-Mastercard",
+              "timestamp": "2025-11-25 17:57:33"
+            },
+            {
+              "payment_method": "BBVA",
+              "html_anchor": "SIQURO-BBVA_ES-BBVA",
+              "timestamp": "2025-11-25 17:57:33"
+            },
+            {
+              "payment_method": "Caixa Bank",
+              "html_anchor": "SIQURO-CAIXABANK-Caixa Bank",
+              "timestamp": "2025-11-25 17:57:33"
+            },
+            {
+              "payment_method": "Banco Santander",
+              "html_anchor": "SIQURO-BANCO_SANTANDER-Banco Santander",
+              "timestamp": "2025-11-25 17:57:33"
+            },
+            {
+              "payment_method": "ING",
+              "html_anchor": "SIQURO-ING-ING",
+              "timestamp": "2025-11-25 17:57:33"
+            },
+            {
+              "payment_method": "Revolut",
+              "html_anchor": "NODAPAY-REVOLUT-Revolut",
+              "timestamp": "2025-11-25 17:57:33"
+            },
+            {
+              "payment_method": "PSCD",
+              "html_anchor": "UTORG-PAYSAFECARD-PSCD",
+              "timestamp": "2025-11-25 17:57:33"
+            },
+            {
+              "payment_method": "SKRL",
+              "html_anchor": "UTORG-WALLET_SKRILL-SKRL",
+              "timestamp": "2025-11-25 17:57:33"
+            },
+            {
+              "payment_method": "NTLR",
+              "html_anchor": "UTORG-WALLET_NETELLER-NTLR",
+              "timestamp": "2025-11-25 17:57:33"
+            },
+            {
+              "payment_method": "Crypto",
+              "html_anchor": "FINRAX-CRYPTO-Crypto",
+              "timestamp": "2025-11-25 17:57:33"
+            },
+            {
+              "payment_method": "MiFinity",
+              "html_anchor": "MIFINITY-WALLET_MIFINITY-MiFinity",
+              "timestamp": "2025-11-25 17:57:33"
+            }
+          ]
+        },
+        {
+          "country": "Sweden",
+          "payment_methods": [
+            {
+              "payment_method": "Visa",
+              "html_anchor": "PCI_DNSPAY-VISA_S2S-Visa",
+              "timestamp": "2025-11-25 17:57:44"
+            },
+            {
+              "payment_method": "Mastercard",
+              "html_anchor": "PCI_DNSPAY-MASTERCARD_S2S-Mastercard",
+              "timestamp": "2025-11-25 17:57:44"
+            },
+            {
+              "payment_method": "N26",
+              "html_anchor": "GATEIQ-N26-N26",
+              "timestamp": "2025-11-25 17:57:44"
+            },
+            {
+              "payment_method": "Crypto",
+              "html_anchor": "FINRAX-CRYPTO-Crypto",
+              "timestamp": "2025-11-25 17:57:44"
+            },
+            {
+              "payment_method": "MiFinity",
+              "html_anchor": "MIFINITY-WALLET_MIFINITY-MiFinity",
+              "timestamp": "2025-11-25 17:57:44"
+            }
+          ]
+        },
+        {
+          "country": "UAE",
+          "payment_methods": [
+            {
+              "payment_method": "Visa",
+              "html_anchor": "PCI_DNSPAY-VISA_S2S-Visa",
+              "timestamp": "2025-11-25 17:57:55"
+            },
+            {
+              "payment_method": "Mastercard",
+              "html_anchor": "PCI_DNSPAY-MASTERCARD_S2S-Mastercard",
+              "timestamp": "2025-11-25 17:57:55"
+            },
+            {
+              "payment_method": "Crypto",
+              "html_anchor": "FINRAX-CRYPTO-Crypto",
+              "timestamp": "2025-11-25 17:57:55"
+            },
+            {
+              "payment_method": "MiFinity",
+              "html_anchor": "MIFINITY-WALLET_MIFINITY-MiFinity",
+              "timestamp": "2025-11-25 17:57:55"
+            },
+            {
+              "payment_method": "MuchBetter",
+              "html_anchor": "MUCHBETTER-WALLET_MUCHBETTER-MuchBetter",
+              "timestamp": "2025-11-25 17:57:55"
+            },
+            {
+              "payment_method": "Skrill",
+              "html_anchor": "SKRILL-WALLET_SKRILL-Skrill ",
+              "timestamp": "2025-11-25 17:57:55"
+            },
+            {
+              "payment_method": "NTLR",
+              "html_anchor": "UTORG-WALLET_NETELLER-NTLR",
+              "timestamp": "2025-11-25 17:57:55"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "Rollino",
+      "countries": [
+        {
+          "country": "Austria",
+          "payment_methods": [
+            {
+              "payment_method": "Corefy",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_visa-mastercard-white.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Paysafecard AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-paysafecard-dark.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Sofort(klarna) AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_klarna-white.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Noda Austria",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_at-white.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Rapid transfer AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_rapidbankdeposit-light.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Skrill AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-skrill-white.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Utorg rapid transfer",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-utorg-rpdt-light-1.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Impaya N26",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp-logo-n26openbanking-white.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Impaya Revolut",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_revltopenbanking-white-1.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Impaya Openbanking",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_banktransfer3-white.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Impaya Wise AU",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp-logo-wiseopenbanking-light.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Neteller AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-neteller-white.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Payop Banks AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_paybybank-white.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Utorg skrill",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_chainvalleyskrl-white.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Flexepin AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-flexepin-light.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Mifinity AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Utorg neteller",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_chainvalleyntlr-white.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Impaya apple pay/ Gpay UK",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_applepay-light.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Impaya googlepay UK",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_googlepay-white-1.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Utorg Openbanking",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_banktransfer4-white.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Binance Pay AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_binancepay-light.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "PayByBank",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_banktransferpayment_light.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Bitpace",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_bitpacecrypto2-light-1.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "ByBit Pay",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_bybitpay-white.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Tether",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_tethertrc20-light.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-ethereum-light.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            },
+            {
+              "payment_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-litecoin-light.svg",
+              "timestamp": "2025-11-25 17:59:30"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Rapid transfer AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_rapidbankdeposit-light.svg",
+              "timestamp": "2025-11-25 17:59:35"
+            },
+            {
+              "withdraw_method": "Skrill AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-skrill-white.svg",
+              "timestamp": "2025-11-25 17:59:35"
+            },
+            {
+              "withdraw_method": "Mifinity AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 17:59:35"
+            },
+            {
+              "withdraw_method": "skrill NETELLER",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-neteller-light.svg",
+              "timestamp": "2025-11-25 17:59:35"
+            },
+            {
+              "withdraw_method": "MiFinity PAB",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-banktransfer-light-1.svg",
+              "timestamp": "2025-11-25 17:59:35"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_tethertrc20-light.svg",
+              "timestamp": "2025-11-25 17:59:35"
+            },
+            {
+              "withdraw_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:59:35"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-ethereum-light.svg",
+              "timestamp": "2025-11-25 17:59:35"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-tron-light.svg",
+              "timestamp": "2025-11-25 17:59:35"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:59:35"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-litecoin-light.svg",
+              "timestamp": "2025-11-25 17:59:35"
+            }
+          ]
+        },
+        {
+          "country": "Germany",
+          "payment_methods": [
+            {
+              "payment_method": "Impaya apple pay/ Gpay UK",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_applepay-light.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Impaya googlepay UK",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_googlepay-white-1.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Sofort(klarna) AT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_klarna-white.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Noda DE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_de-white.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Corefy DE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_visa-mastercard-white.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Paysafecard",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-paysafecard-light-1.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Flexepin DE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-flexepin-light.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Cashlib DE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_cashlib-light.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Impaya Revolut",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_revltopenbanking-white-1.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Jeton DE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_jetonbank-light.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Mifinity DE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Impaya Wise DE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp-logo-wiseopenbanking-light.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Binance Pay DE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_binancepay-light.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Bitpace",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_bitpacecrypto2-light-1.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "ByBit Pay",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_bybitpay-white.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Tether",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_tethertrc20-light.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-ethereum-light.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            },
+            {
+              "payment_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-litecoin-light.svg",
+              "timestamp": "2025-11-25 17:58:41"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Jeton DE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_jetonbank-light.svg",
+              "timestamp": "2025-11-25 17:58:46"
+            },
+            {
+              "withdraw_method": "Mifinity DE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 17:58:46"
+            },
+            {
+              "withdraw_method": "MiFinity PAB",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-banktransfer-light-1.svg",
+              "timestamp": "2025-11-25 17:58:46"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_tethertrc20-light.svg",
+              "timestamp": "2025-11-25 17:58:46"
+            },
+            {
+              "withdraw_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:58:46"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-ethereum-light.svg",
+              "timestamp": "2025-11-25 17:58:46"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-tron-light.svg",
+              "timestamp": "2025-11-25 17:58:46"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:58:46"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-litecoin-light.svg",
+              "timestamp": "2025-11-25 17:58:46"
+            }
+          ]
+        },
+        {
+          "country": "Italy",
+          "payment_methods": [
+            {
+              "payment_method": "Corefy",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_visa-mastercard-white.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Utorg paysafecard",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_chainvalleypscrd-white.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Mifinity IT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Noda – Italy",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_it2-white.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Flexepin IT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-flexepin-light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Impaya Revolut",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_revltopenbanking-white-1.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Impaya Openbanking",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_banktransfer3-white.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Neteller",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-neteller-light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Payop banks IT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_paybybank-white.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Volt IT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_directbanktransfer_light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Utorg rapid transfer",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-utorg-rpdt-light-1.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Utorg skrill",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_chainvalleyskrl-white.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Impaya N26",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp-logo-n26openbanking-white.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Impaya Wise",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp-logo-wiseopenbanking-light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Utorg neteller",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_chainvalleyntlr-white.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "PayByBank",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_banktransferpayment_light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Impaya apple pay/ Gpay UK",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_applepay-light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Impaya googlepay UK",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_googlepay-white-1.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Utorg Openbanking",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_banktransfer4-white.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Bitpace",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_bitpacecrypto2-light-1.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "ByBit Pay",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_bybitpay-white.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Binance Pay IT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_binancepay-light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Tether",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_tethertrc20-light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-ethereum-light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            },
+            {
+              "payment_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-litecoin-light.svg",
+              "timestamp": "2025-11-25 18:01:34"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Mifinity IT",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 18:01:39"
+            },
+            {
+              "withdraw_method": "MiFinity PAB",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-banktransfer-light-1.svg",
+              "timestamp": "2025-11-25 18:01:39"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_tethertrc20-light.svg",
+              "timestamp": "2025-11-25 18:01:39"
+            },
+            {
+              "withdraw_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 18:01:39"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-ethereum-light.svg",
+              "timestamp": "2025-11-25 18:01:39"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-tron-light.svg",
+              "timestamp": "2025-11-25 18:01:39"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 18:01:39"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-litecoin-light.svg",
+              "timestamp": "2025-11-25 18:01:39"
+            }
+          ]
+        },
+        {
+          "country": "Sweden",
+          "payment_methods": [
+            {
+              "payment_method": "Corefy",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_visa-mastercard-white.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Utorg paysafecard SW",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_chainvalleypscrd-white.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Impaya Revolut",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_revltopenbanking-white-1.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Mifinity SE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Impaya Wise SE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp-logo-wiseopenbanking-light.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Utorg neteller SE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_chainvalleyntlr-white.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Flexepin SE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-flexepin-light.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Impaya N26",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp-logo-n26openbanking-white.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Utorg skrill",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_chainvalleyskrl-white.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Impaya apple pay/ Gpay UK",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_applepay-light.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Impaya googlepay UK",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_googlepay-white-1.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Binance Pay SE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_binancepay-light.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "PayByBank",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_banktransferpayment_light.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Bitpace",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_bitpacecrypto2-light-1.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "ByBit Pay",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_bybitpay-white.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Tether",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_tethertrc20-light.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-ethereum-light.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            },
+            {
+              "payment_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-litecoin-light.svg",
+              "timestamp": "2025-11-25 18:02:46"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Mifinity SE",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 18:02:51"
+            },
+            {
+              "withdraw_method": "MiFinity PAB",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-banktransfer-light-1.svg",
+              "timestamp": "2025-11-25 18:02:51"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_tethertrc20-light.svg",
+              "timestamp": "2025-11-25 18:02:51"
+            },
+            {
+              "withdraw_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 18:02:51"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-ethereum-light.svg",
+              "timestamp": "2025-11-25 18:02:51"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-tron-light.svg",
+              "timestamp": "2025-11-25 18:02:51"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 18:02:51"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-litecoin-light.svg",
+              "timestamp": "2025-11-25 18:02:51"
+            }
+          ]
+        },
+        {
+          "country": "UK",
+          "payment_methods": [
+            {
+              "payment_method": "Rillpay UK",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_rillpay_en-white.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            },
+            {
+              "payment_method": "Corefy UK",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_visa-mastercard-white.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            },
+            {
+              "payment_method": "Bank Transfer UK",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_paybybank-white.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            },
+            {
+              "payment_method": "revolut Cards",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_revlt-white.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            },
+            {
+              "payment_method": "Flexepin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-flexepin-light.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            },
+            {
+              "payment_method": "Paysafecard",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-paysafecard-light-1.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            },
+            {
+              "payment_method": "Binance Pay",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_binancepay-light.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            },
+            {
+              "payment_method": "Bitpace",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_bitpacecrypto2-light-1.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            },
+            {
+              "payment_method": "Tether",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_tethertrc20-light.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            },
+            {
+              "payment_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            },
+            {
+              "payment_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-ethereum-light.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            },
+            {
+              "payment_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            },
+            {
+              "payment_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-litecoin-light.svg",
+              "timestamp": "2025-11-25 18:00:39"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Mifinity pab UK",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-banktransfer-light-2.svg",
+              "timestamp": "2025-11-25 18:00:44"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_tethertrc20-light.svg",
+              "timestamp": "2025-11-25 18:00:44"
+            },
+            {
+              "withdraw_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 18:00:44"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-ethereum-light.svg",
+              "timestamp": "2025-11-25 18:00:44"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-tron-light.svg",
+              "timestamp": "2025-11-25 18:00:44"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 18:00:44"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/rl/img/paysystems/pp_logo-litecoin-light.svg",
+              "timestamp": "2025-11-25 18:00:44"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "Jettbet",
+      "countries": [
+        {
+          "country": "Austria",
+          "payment_methods": [
+            {
+              "payment_method": "Utorg Openbanking",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-banktransfer4-dark.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Paysafecard AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-paysafecard-light.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Skrill AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-skrill-light.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Corefy AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-visamc-white.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Rapid transfer AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_rapidbankdeposit-white.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Flexepin AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-flexepin-light.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Mifinity AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Utorg rapid transfer AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-utorg-rpdt-light.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Utorg neteller AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_chainvalleyntlr-white.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Utorg skrill AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_chainvalleyskrl-white.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Impaya Wise AU",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp-logo-wiseopenbanking-light.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "PayByBank",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_banktransferpayment_white.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Payop Banks AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_paybybank-white.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Impaya openbanking",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_banktransfer3-light.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Impaya Revolut",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_revltopenbanking-white.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Impaya N26",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp-logo-n26openbanking-white.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "ByBit Pay",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_bybitpay-white.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Binance Pay AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_binancepay-light.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Tether",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_tethertrc20-light-1.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            },
+            {
+              "payment_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-litecoin-light-1.svg",
+              "timestamp": "2025-11-25 17:54:13"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Skrill AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-skrill-dark.svg",
+              "timestamp": "2025-11-25 17:54:19"
+            },
+            {
+              "withdraw_method": "Rapid transfer AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_rapidbankdeposit-white.svg",
+              "timestamp": "2025-11-25 17:54:19"
+            },
+            {
+              "withdraw_method": "Mifinity AT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 17:54:19"
+            },
+            {
+              "withdraw_method": "skrill NETELLER",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-neteller-white.svg",
+              "timestamp": "2025-11-25 17:54:19"
+            },
+            {
+              "withdraw_method": "MiFinity PAB",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_banktransfer2-light.svg",
+              "timestamp": "2025-11-25 17:54:19"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_tethertrc20-light-1.svg",
+              "timestamp": "2025-11-25 17:54:19"
+            },
+            {
+              "withdraw_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:54:19"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 17:54:19"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-tron-light.svg",
+              "timestamp": "2025-11-25 17:54:19"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:54:19"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-litecoin-light-1.svg",
+              "timestamp": "2025-11-25 17:54:19"
+            }
+          ]
+        },
+        {
+          "country": "Germany",
+          "payment_methods": [
+            {
+              "payment_method": "Flexepin DE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-flexepin-dark.svg",
+              "timestamp": "2025-11-25 17:53:26"
+            },
+            {
+              "payment_method": "Corefy DE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-visamc-white.svg",
+              "timestamp": "2025-11-25 17:53:26"
+            },
+            {
+              "payment_method": "Impaya Revolut DE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_revltopenbanking-white.svg",
+              "timestamp": "2025-11-25 17:53:26"
+            },
+            {
+              "payment_method": "Cashlib DE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_cashlib-light.svg",
+              "timestamp": "2025-11-25 17:53:26"
+            },
+            {
+              "payment_method": "Mifinity DE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 17:53:26"
+            },
+            {
+              "payment_method": "Jeton DE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_jetonbank-light.svg",
+              "timestamp": "2025-11-25 17:53:26"
+            },
+            {
+              "payment_method": "Impaya Wise",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp-logo-wiseopenbanking-light.svg",
+              "timestamp": "2025-11-25 17:53:26"
+            },
+            {
+              "payment_method": "Binance Pay DE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_binancepay-light.svg",
+              "timestamp": "2025-11-25 17:53:26"
+            },
+            {
+              "payment_method": "ByBit Pay",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_bybitpay-white.svg",
+              "timestamp": "2025-11-25 17:53:26"
+            },
+            {
+              "payment_method": "Tether",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_tethertrc20-light-1.svg",
+              "timestamp": "2025-11-25 17:53:26"
+            },
+            {
+              "payment_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:53:26"
+            },
+            {
+              "payment_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 17:53:27"
+            },
+            {
+              "payment_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:53:27"
+            },
+            {
+              "payment_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-litecoin-light-1.svg",
+              "timestamp": "2025-11-25 17:53:27"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Mifinity DE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_mifinity-dark-2.svg",
+              "timestamp": "2025-11-25 17:53:32"
+            },
+            {
+              "withdraw_method": "Jeton DE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_jetonbank-light.svg",
+              "timestamp": "2025-11-25 17:53:32"
+            },
+            {
+              "withdraw_method": "MiFinity PAB",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_banktransfer2-light.svg",
+              "timestamp": "2025-11-25 17:53:32"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_tethertrc20-light-1.svg",
+              "timestamp": "2025-11-25 17:53:32"
+            },
+            {
+              "withdraw_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:53:32"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 17:53:32"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-tron-light.svg",
+              "timestamp": "2025-11-25 17:53:32"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:53:32"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-litecoin-light-1.svg",
+              "timestamp": "2025-11-25 17:53:32"
+            }
+          ]
+        },
+        {
+          "country": "Italy",
+          "payment_methods": [
+            {
+              "payment_method": "Utorg Openbanking",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-banktransfer4-dark.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Corefy IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-visamc-white.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Impaya Revolut IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_revltopenbanking-white.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Payop banks IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_paybybank-white.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Impaya openbanking IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_banktransfer3-light.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Impaya Wise IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp-logo-wiseopenbanking-light.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Utorg rapid transfer IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-utorg-rpdt-light.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Impaya N26 ITr",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp-logo-n26openbanking-white.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Utorg skrill IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_chainvalleyskrl-white.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Utorg neteller IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_chainvalleyntlr-white.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Utorg paysafecard IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_chainvalleypscrd-white.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Mifinity IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Flexepin IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-flexepin-light.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Binance Pay IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_binancepay-light.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "PayByBank",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_banktransferpayment_white.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Corefy Sepa Toda",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_payleropenbankinginstant-white.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "ByBit Pay",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_bybitpay-white.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Tether",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_tethertrc20-light-1.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            },
+            {
+              "payment_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-litecoin-light-1.svg",
+              "timestamp": "2025-11-25 17:56:44"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Mifinity IT",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_mifinity-dark-2.svg",
+              "timestamp": "2025-11-25 17:56:49"
+            },
+            {
+              "withdraw_method": "MiFinity PAB",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_banktransfer2-light.svg",
+              "timestamp": "2025-11-25 17:56:49"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_tethertrc20-light-1.svg",
+              "timestamp": "2025-11-25 17:56:49"
+            },
+            {
+              "withdraw_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:56:49"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 17:56:49"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-tron-light.svg",
+              "timestamp": "2025-11-25 17:56:49"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:56:49"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-litecoin-light-1.svg",
+              "timestamp": "2025-11-25 17:56:49"
+            }
+          ]
+        },
+        {
+          "country": "Sweden",
+          "payment_methods": [
+            {
+              "payment_method": "Corefy SE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-visamc-dark.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Impaya Revolut SE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_revltopenbanking-white.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Utorg paysafecard SWE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_chainvalleypscrd-white.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Mifinity SE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_mifinity-light.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Impaya N26 SE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp-logo-n26openbanking-white.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Impaya Wise SE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp-logo-wiseopenbanking-light.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Utorg skrill SWE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_chainvalleyskrl-white.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Utorg neteller SWE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_chainvalleyntlr-white.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Flexepin SE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-flexepin-light.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Binance Pay SE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_binancepay-light.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "PayByBank",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_banktransferpayment_white.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "ByBit Pay",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_bybitpay-white.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Tether",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_tethertrc20-light-1.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            },
+            {
+              "payment_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-litecoin-light-1.svg",
+              "timestamp": "2025-11-25 17:55:57"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Mifinity SE",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_mifinity-dark-2.svg",
+              "timestamp": "2025-11-25 17:56:03"
+            },
+            {
+              "withdraw_method": "MiFinity PAB",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_banktransfer2-light.svg",
+              "timestamp": "2025-11-25 17:56:03"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_tethertrc20-light-1.svg",
+              "timestamp": "2025-11-25 17:56:03"
+            },
+            {
+              "withdraw_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:56:03"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 17:56:03"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-tron-light.svg",
+              "timestamp": "2025-11-25 17:56:03"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:56:03"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-litecoin-light-1.svg",
+              "timestamp": "2025-11-25 17:56:03"
+            }
+          ]
+        },
+        {
+          "country": "UK",
+          "payment_methods": [
+            {
+              "payment_method": "Rillpay UK",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_rillpay_en-dark.svg",
+              "timestamp": "2025-11-25 17:54:59"
+            },
+            {
+              "payment_method": "Corefy UK",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-visamc-white.svg",
+              "timestamp": "2025-11-25 17:54:59"
+            },
+            {
+              "payment_method": "Bank Transfer UK",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_paybybank-white.svg",
+              "timestamp": "2025-11-25 17:54:59"
+            },
+            {
+              "payment_method": "revolut Cards",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_revlt-white.svg",
+              "timestamp": "2025-11-25 17:54:59"
+            },
+            {
+              "payment_method": "Flexepin UK",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-flexepin-light.svg",
+              "timestamp": "2025-11-25 17:54:59"
+            },
+            {
+              "payment_method": "Binance Pay",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_binancepay-light.svg",
+              "timestamp": "2025-11-25 17:54:59"
+            },
+            {
+              "payment_method": "Tether",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_tethertrc20-light-1.svg",
+              "timestamp": "2025-11-25 17:54:59"
+            },
+            {
+              "payment_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:54:59"
+            },
+            {
+              "payment_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 17:54:59"
+            },
+            {
+              "payment_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:54:59"
+            },
+            {
+              "payment_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-litecoin-light-1.svg",
+              "timestamp": "2025-11-25 17:54:59"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Mifinity pab UK",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-banktransfer-light-2.svg",
+              "timestamp": "2025-11-25 17:55:04"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_tethertrc20-light-1.svg",
+              "timestamp": "2025-11-25 17:55:04"
+            },
+            {
+              "withdraw_method": "Coinspaid USDC",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo_usdc_erc20-light.svg",
+              "timestamp": "2025-11-25 17:55:04"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 17:55:04"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-tron-light.svg",
+              "timestamp": "2025-11-25 17:55:04"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-bitcoin-light.svg",
+              "timestamp": "2025-11-25 17:55:04"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/jb/img/paysystems/pp_logo-litecoin-light-1.svg",
+              "timestamp": "2025-11-25 17:55:04"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "Casinojoy",
+      "countries": [
+        {
+          "country": "Austria",
+          "payment_methods": [
+            {
+              "payment_method": "Corefy AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-visamc-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Paysafecard AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-paysafecard-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Skrill AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-skrill-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Impaya Revolut AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_revltopenbanking-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Rapid transfer AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_rapidbankdeposit-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Utorg neteller AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_chainvalleyntlr-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Utorg Openbanking AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_banktransfer4-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Utorg rapid transfer AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-utorg-rpdt-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Impaya openbanking AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_banktransfer3-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Impaya Wise AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp-logo-wiseopenbanking-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Impaya N26 AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp-logo-n26openbanking-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Utorg skrill AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_chainvalleyskrl-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Mifinity AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_mifinity-dark.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Payop Banks AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_paybybank-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Flexepin AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-flexepin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "Binance Pay AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_binancepay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "PayByBank",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_banktransferpayment_lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            },
+            {
+              "payment_method": "ByBit Pay",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_bybitpay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:26"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Skrill AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-skrill-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:32"
+            },
+            {
+              "withdraw_method": "Rapid transfer AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_rapidbankdeposit-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:32"
+            },
+            {
+              "withdraw_method": "Mifinity AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_mifinity-dark.svg",
+              "timestamp": "2025-11-25 18:04:32"
+            },
+            {
+              "withdraw_method": "MiFinity PAB",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_banktransfer2-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:32"
+            },
+            {
+              "withdraw_method": "skrill NETELLER",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-neteller-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:32"
+            },
+            {
+              "withdraw_method": "USDC",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_usdc_erc20-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:32"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_tethertrc20-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:32"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 18:04:32"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-tron-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:32"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-bitcoin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:32"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-litecoin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:04:32"
+            }
+          ]
+        },
+        {
+          "country": "Germany",
+          "payment_methods": [
+            {
+              "payment_method": "Flexepin DE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-flexepin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": "Paysafecard",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-paysafecard-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": "Corefy DE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-visamc-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": "Sofort(klarna) AT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_klarna-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": "Corefy Sepa Toda sdt",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_payleropenbankinginstant-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": "Impaya Revolut DE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_revltopenbanking-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": "Mifinity DE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_mifinity-dark.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": "Cashlib DE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_cashlib-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": "Jeton DE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_jetonbank-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": "Impaya Wise DE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp-logo-wiseopenbanking-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": "Impaya apple pay/ Gpay",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_applepay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": " Impaya googlepay",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_googlepay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": "Binance Pay DE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_binancepay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            },
+            {
+              "payment_method": "ByBit Pay",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_bybitpay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:39"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Mifinity DE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_mifinity-dark.svg",
+              "timestamp": "2025-11-25 18:03:44"
+            },
+            {
+              "withdraw_method": "Jeton DE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_jetonbank-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:44"
+            },
+            {
+              "withdraw_method": "MiFinity PAB",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_banktransfer2-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:44"
+            },
+            {
+              "withdraw_method": "USDC",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_usdc_erc20-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:44"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_tethertrc20-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:44"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 18:03:44"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-tron-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:44"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-bitcoin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:44"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-litecoin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:03:44"
+            }
+          ]
+        },
+        {
+          "country": "Italy",
+          "payment_methods": [
+            {
+              "payment_method": "Corefy IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-visamc-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Utorg paysafecard IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_chainvalleypscrd-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Mifinity IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_mifinity-dark.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Utorg Openbanking IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_banktransfer4-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Impaya openbanking IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_banktransfer3-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Impaya Revolut IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_revltopenbanking-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Impaya N26 IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp-logo-n26openbanking-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Impaya Wise IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp-logo-wiseopenbanking-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Utorg neteller IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_chainvalleyntlr-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Utorg rapid transfer IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-utorg-rpdt-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Utorg skrill IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_chainvalleyskrl-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Flexepin IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-flexepin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Payop banks IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_paybybank-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Impaya apple pay/ Gpay",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_applepay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Corefy Sepa Toda sdt",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_payleropenbankinginstant-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": " Impaya googlepay",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_googlepay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "Binance Pay IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_binancepay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "PayByBank",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_banktransferpayment_lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            },
+            {
+              "payment_method": "ByBit Pay",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_bybitpay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:45"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Mifinity IT",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_mifinity-dark.svg",
+              "timestamp": "2025-11-25 18:06:50"
+            },
+            {
+              "withdraw_method": "MiFinity PAB",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_banktransfer2-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:50"
+            },
+            {
+              "withdraw_method": "USDC",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_usdc_erc20-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:50"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_tethertrc20-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:50"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 18:06:50"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-tron-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:50"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-bitcoin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:50"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-litecoin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:06:50"
+            }
+          ]
+        },
+        {
+          "country": "Sweden",
+          "payment_methods": [
+            {
+              "payment_method": "Corefy SE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-visamc-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "Impaya Revolut SWE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_revltopenbanking-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "Utorg skrill",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_chainvalleyskrl-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "Utorg neteller SE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_chainvalleyntlr-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "Impaya N26 SWE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp-logo-n26openbanking-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "Impaya Wise SWE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp-logo-wiseopenbanking-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "Utorg paysafecard SE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_chainvalleypscrd-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "Mifinity SE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_mifinity-dark.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "Flexepin SWE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-flexepin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "Corefy Sepa Toda sdt",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_payleropenbankinginstant-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "Impaya apple pay/ Gpay",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_applepay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": " Impaya googlepay",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_googlepay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "Binance Pay SE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_binancepay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "PayByBank",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_banktransferpayment_lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            },
+            {
+              "payment_method": "ByBit Pay",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_bybitpay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:07:58"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Mifinity SE",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_mifinity-dark.svg",
+              "timestamp": "2025-11-25 18:08:03"
+            },
+            {
+              "withdraw_method": "MiFinity PAB",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_banktransfer2-lightviolet.svg",
+              "timestamp": "2025-11-25 18:08:03"
+            },
+            {
+              "withdraw_method": "USDC",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_usdc_erc20-lightviolet.svg",
+              "timestamp": "2025-11-25 18:08:03"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_tethertrc20-lightviolet.svg",
+              "timestamp": "2025-11-25 18:08:03"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 18:08:03"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-tron-lightviolet.svg",
+              "timestamp": "2025-11-25 18:08:03"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-bitcoin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:08:03"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-litecoin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:08:03"
+            }
+          ]
+        },
+        {
+          "country": "UK",
+          "payment_methods": [
+            {
+              "payment_method": "Rillpay UK",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_rillpay_en-lightviolet.svg",
+              "timestamp": "2025-11-25 18:05:31"
+            },
+            {
+              "payment_method": "Corefy UK",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-visamc-lightviolet.svg",
+              "timestamp": "2025-11-25 18:05:31"
+            },
+            {
+              "payment_method": "Bank Transfer UK",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_paybybank-lightviolet.svg",
+              "timestamp": "2025-11-25 18:05:31"
+            },
+            {
+              "payment_method": "revolut Cards",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_revlt-lightviolet.svg",
+              "timestamp": "2025-11-25 18:05:31"
+            },
+            {
+              "payment_method": "Flexepin UK",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-flexepin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:05:31"
+            },
+            {
+              "payment_method": "Binance Pay",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_binancepay-lightviolet.svg",
+              "timestamp": "2025-11-25 18:05:31"
+            }
+          ],
+          "withdraw_methods": [
+            {
+              "withdraw_method": "Mifinity pab",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-banktransfer-lightviolet.svg",
+              "timestamp": "2025-11-25 18:05:36"
+            },
+            {
+              "withdraw_method": "USDC",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_usdc_erc20-lightviolet.svg",
+              "timestamp": "2025-11-25 18:05:36"
+            },
+            {
+              "withdraw_method": "Tether",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo_tethertrc20-lightviolet.svg",
+              "timestamp": "2025-11-25 18:05:36"
+            },
+            {
+              "withdraw_method": "Ethereum",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-ethereum-white.svg",
+              "timestamp": "2025-11-25 18:05:36"
+            },
+            {
+              "withdraw_method": "Tron",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-tron-lightviolet.svg",
+              "timestamp": "2025-11-25 18:05:36"
+            },
+            {
+              "withdraw_method": "Bitcoin",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-bitcoin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:05:36"
+            },
+            {
+              "withdraw_method": "Litecoin",
+              "html_anchor": "https://altacdn.com/cj/img/paysystems/pp_logo-litecoin-lightviolet.svg",
+              "timestamp": "2025-11-25 18:05:36"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
