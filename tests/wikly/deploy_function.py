@@ -8,57 +8,57 @@ FUNCTION = "my-function"
 BUILD_ID = "${BUILD_ID}"
 
 def get_execution_logs(response_json_str):       
+    try: 
+        print("type(response_json_str)", type(response_json_str))
         response_json = json.loads(response_json_str)
+        execution_name = response_json.get('metadata', {}).get('name')
+    except Exception as e:
+        print("error", e)
 
-        try: 
-            execution_name = response_json.get('metadata', {}).get('name')
-        except Exception as e:
-            print("error", e)
+    if not execution_name:
+        # Это может случиться, если Job завершился слишком быстро или упал при старте
+        raise Exception("Не удалось получить Execution ID из ответа Cloud Run. Проверьте системные логи.")
+    
+    print("Ответ Cloud Run Job (метаданные запуска):")
+    print(result.stdout.strip())
+    print(f"Execution ID: {execution_name}")
 
-        if not execution_name:
-            # Это может случиться, если Job завершился слишком быстро или упал при старте
-            raise Exception("Не удалось получить Execution ID из ответа Cloud Run. Проверьте системные логи.")
-        
-        print("Ответ Cloud Run Job (метаданные запуска):")
-        print(result.stdout.strip())
-        print(f"Execution ID: {execution_name}")
+    # 3. Читаем логи для этого выполнения
+    print("\n--- ЛОГИ КОНТЕЙНЕРА (из Cloud Logging) ---")
+    
+    # Фильтр для gcloud logging read
+    log_filter = (
+        f'resource.type="cloud_run_job" '
+        f'resource.labels.job_name="{function_name}" '
+        f'resource.labels.location="{region}" '
+        f'resource.labels.execution_name="{execution_name}"'
+    )
 
-        # 3. Читаем логи для этого выполнения
-        print("\n--- ЛОГИ КОНТЕЙНЕРА (из Cloud Logging) ---")
-        
-        # Фильтр для gcloud logging read
-        log_filter = (
-            f'resource.type="cloud_run_job" '
-            f'resource.labels.job_name="{function_name}" '
-            f'resource.labels.location="{region}" '
-            f'resource.labels.execution_name="{execution_name}"'
-        )
-
-        # Читаем логи с ограничением в 100 записей
-        log_read_command = [
-            'gcloud', 'logging', 'read', log_filter,
-            '--project', PROJECT_ID,
-            '--limit', '100',
-            '--format=json' 
-        ]
-        
-        log_result = subprocess.run(log_read_command, check=False, capture_output=True, text=True)
-        
-        # Выводим найденные логи
-        if log_result.stdout:
-            logs = json.loads(log_result.stdout)
-            if logs:
-                print(f"Найдено {len(logs)} записей логов.")
-                for entry in logs:
-                    # Выводим текст сообщения или JSON-тело
-                    payload = entry.get('textPayload') or entry.get('jsonPayload')
-                    print(f"[{entry.get('timestamp')}] {payload}")
-            else:
-                print("Логи не найдены в Cloud Logging для этого Execution ID.")
+    # Читаем логи с ограничением в 100 записей
+    log_read_command = [
+        'gcloud', 'logging', 'read', log_filter,
+        '--project', PROJECT_ID,
+        '--limit', '100',
+        '--format=json' 
+    ]
+    
+    log_result = subprocess.run(log_read_command, check=False, capture_output=True, text=True)
+    
+    # Выводим найденные логи
+    if log_result.stdout:
+        logs = json.loads(log_result.stdout)
+        if logs:
+            print(f"Найдено {len(logs)} записей логов.")
+            for entry in logs:
+                # Выводим текст сообщения или JSON-тело
+                payload = entry.get('textPayload') or entry.get('jsonPayload')
+                print(f"[{entry.get('timestamp')}] {payload}")
         else:
-            print("Ошибка при чтении логов Gcloud (проверьте права доступа).")
-        
-        return "SUCCESS" # Возвращаем признак успеха
+            print("Логи не найдены в Cloud Logging для этого Execution ID.")
+    else:
+        print("Ошибка при чтении логов Gcloud (проверьте права доступа).")
+    
+    return "SUCCESS" # Возвращаем признак успеха
 
 
 def execute_command(command):
