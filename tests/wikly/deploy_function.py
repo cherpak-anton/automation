@@ -22,15 +22,17 @@ def get_execution_logs(response_json_str, region, project_id):
 
     # Фильтр для gcloud logging read
     log_filter = (
-        f'resource.type="cloud_run_job" '
-        f'resource.labels.job_name="{FUNCTION}" '
+        f'resource.type="cloud_run_revision" '
+        f'resource.labels.service_name="{FUNCTION}" '
         f'resource.labels.location="{region}" '
-        f'resource.labels.execution_name="{execution_name}"'
+        f'(labels."run.googleapis.com/job_execution_id"="{execution_name}" '
+        f'OR labels."run.googleapis.com/execution_id"="{execution_name}")'
     )
 
     log_read_command = [
         'gcloud', 'logging', 'read', log_filter,
         '--project', project_id,
+        "--limit=1000",
         '--format=json' 
     ]
     time.sleep(15)
