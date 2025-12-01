@@ -1,4 +1,5 @@
 import subprocess
+import datetime
 import base64
 import json
 import time
@@ -35,9 +36,19 @@ def get_execution_logs(response_json_str, region, project_id):
         "--limit=1000",
         '--format=json' 
     ]
-    time.sleep(15)
 
-    log_result = subprocess.run(log_read_command, check=False, capture_output=True, text=True)
+    for _ in range(10):
+        print("waiting for log", datetime.datetime.now())
+        time.sleep(5)
+        log_result = subprocess.run(log_read_command, check=False, capture_output=True, text=True)
+        try:
+            logs = json.loads(log_result.stdout)
+            if logs:
+                print(f"Найдено {len(logs)} записей логов.")
+                break
+        except:
+            print("failed to get logs")
+    
     print("log_result", log_result)
     
     # Выводим найденные логи
@@ -61,6 +72,7 @@ def execute_command(command, region, project_id):
     try:
         # Run command
         result = subprocess.run(command, check=True, capture_output=True, text=True)
+        print("Finished", datetime.datetime.now())
         response_json_str = result.stdout.strip()
         print("response_json_str", response_json_str)
 
