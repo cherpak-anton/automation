@@ -4,9 +4,45 @@ import base64
 import json
 import time
 import sys
+import re
 
 REGIONS = ["us-central1"]
 FUNCTION = "my-function"
+
+def log_analizer(logs):
+    exit_code_pattern = re.compile(r'exit_?code[:\s]+(\d+)', re.IGNORECASE)
+    print(f"Найдено {len(logs)} записей логов.")
+    job_failed = False
+
+    for entry in logs:
+        payload = entry.get('textPayload') or entry.get('jsonPayload')
+        print(f"[{entry.get('timestamp')}] {payload}")
+
+        if isinstance(payload, str):
+            match = exit_code_pattern.search(payload)
+            if match:
+                exit_code = int(match.group(1))
+                if exit_code != 0:
+                    job_failed = True
+                    print(f"🚨 Найдено regex: ненулевой код выхода {exit_code}")
+
+            if "FAILED" in payload:
+                job_failed = True
+                
+        elif isinstance(payload, dict):
+            exit_code = payload.get("exit_code")
+            if exit_code is not None and exit_code != 0:
+                job_failed = True
+                print(f"🚨 Найдено JSON: ненулевой код выхода {exit_code}") 
+                
+    if job_failed:
+        print("\n🚨 ОБНАРУЖЕН СБОЙ ВЫПОЛНЕНИЯ! Сборка будет прервана.")
+        raise Exception("Выполнение Job Cloud Run завершилось с ошибкой. См. логи выше.")
+        
+    return "SUCCESS"
+    
+    
+
 
 def get_execution_logs(response_json_str, region, project_id):       
     try: 
@@ -19,9 +55,6 @@ def get_execution_logs(response_json_str, region, project_id):
         # Это может случиться, если Job завершился слишком быстро или упал при старте
         raise Exception("Не удалось получить Execution ID из ответа Cloud Run. Проверьте системные логи.")
     
-    print(f"Execution ID: {execution_name}")
-
-    # Фильтр для gcloud logging read
     log_filter = (
         f'resource.type="cloud_run_job" AND "{execution_name}"'
     )
@@ -29,41 +62,19 @@ def get_execution_logs(response_json_str, region, project_id):
     log_read_command = [
         'gcloud', 'logging', 'read', log_filter,
         '--project', project_id,
-        "--limit=1000",
+        '--order=asc',
         '--format=json' 
     ]
-    time.sleep(15)
 
-    for _ in range(20):
-        print("waiting for log", datetime.datetime.now())
-        time.sleep(5)
-        log_result = subprocess.run(log_read_command, check=False, capture_output=True, text=True)
-        try:
-            logs = json.loads(log_result.stdout)
-            if logs:
-                print(f"Найдено {len(logs)} записей логов.")
-                break
-        except:
-            print("failed to get logs")
+    time.sleep(10)
+    log_result = subprocess.run(log_read_command, check=False, capture_output=True, text=True)
     
-    print("log_result", log_result)
-    
-    # Выводим найденные логи
     if log_result.stdout:
         logs = json.loads(log_result.stdout)
         if logs:
-            print(f"Найдено {len(logs)} записей логов.")
-            for entry in logs:
-                # Выводим текст сообщения или JSON-тело
-                payload = entry.get('textPayload') or entry.get('jsonPayload')
-                print(f"[{entry.get('timestamp')}] {payload}")
-        else:
-            print("Логи не найдены в Cloud Logging для этого Execution ID.")
-    else:
-        print("Ошибка при чтении логов Gcloud (проверьте права доступа).")
-    
-    return "SUCCESS" # Возвращаем признак успеха
+            return log_analizer(logs)
 
+    raise Exception("Не удалось получить логи Job'а. Сборка прервана.")
 
 def execute_command(command, region, project_id):
     try:
