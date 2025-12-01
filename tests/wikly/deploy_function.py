@@ -1,6 +1,7 @@
 import subprocess
 import base64
 import json
+import time
 import sys
 
 REGIONS = ["us-central1"]
@@ -8,7 +9,6 @@ FUNCTION = "my-function"
 
 def get_execution_logs(response_json_str, region, project_id):       
     try: 
-        print("type(response_json_str)", type(response_json_str))
         response_json = json.loads(response_json_str)
         execution_name = response_json.get('metadata', {}).get('name')
     except Exception as e:
@@ -33,8 +33,10 @@ def get_execution_logs(response_json_str, region, project_id):
         '--project', project_id,
         '--format=json' 
     ]
-    
+    time.sleep(7)
+
     log_result = subprocess.run(log_read_command, check=False, capture_output=True, text=True)
+    print("log_result", log_result)
     
     # Выводим найденные логи
     if log_result.stdout:
