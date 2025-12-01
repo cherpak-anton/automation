@@ -24,6 +24,7 @@ steps:
     args:
       - "tests/wikly/deploy_function.py" 
       - "${BUILD_ID}"
+      - "${PROJECT_ID}"
     env:
       - 'CLOUD_PROJECT_ID=${PROJECT_ID}'
 

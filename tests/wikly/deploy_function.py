@@ -5,9 +5,8 @@ import sys
 
 REGIONS = ["us-central1"]
 FUNCTION = "my-function"
-BUILD_ID = "${BUILD_ID}"
 
-def get_execution_logs(response_json_str):       
+def get_execution_logs(response_json_str, region, project_id):       
     try: 
         print("type(response_json_str)", type(response_json_str))
         response_json = json.loads(response_json_str)
@@ -19,26 +18,19 @@ def get_execution_logs(response_json_str):
         # Это может случиться, если Job завершился слишком быстро или упал при старте
         raise Exception("Не удалось получить Execution ID из ответа Cloud Run. Проверьте системные логи.")
     
-    print("Ответ Cloud Run Job (метаданные запуска):")
-    print(result.stdout.strip())
     print(f"Execution ID: {execution_name}")
 
-    # 3. Читаем логи для этого выполнения
-    print("\n--- ЛОГИ КОНТЕЙНЕРА (из Cloud Logging) ---")
-    
     # Фильтр для gcloud logging read
     log_filter = (
         f'resource.type="cloud_run_job" '
-        f'resource.labels.job_name="{function_name}" '
+        f'resource.labels.job_name="{FUNCTION}" '
         f'resource.labels.location="{region}" '
         f'resource.labels.execution_name="{execution_name}"'
     )
 
-    # Читаем логи с ограничением в 100 записей
     log_read_command = [
         'gcloud', 'logging', 'read', log_filter,
-        '--project', PROJECT_ID,
-        '--limit', '100',
+        '--project', project_id,
         '--format=json' 
     ]
     
@@ -61,7 +53,7 @@ def get_execution_logs(response_json_str):
     return "SUCCESS" # Возвращаем признак успеха
 
 
-def execute_command(command):
+def execute_command(command, region, project_id):
     try:
         # Run command
         result = subprocess.run(command, check=True, capture_output=True, text=True)
@@ -75,7 +67,7 @@ def execute_command(command):
                 print("Системный вывод (stderr):", result.stderr.strip())
             raise Exception("Пустой ответ от gcloud run jobs execute. Не удалось получить Execution ID.")
 
-        return get_execution_logs(response_json_str)
+        return get_execution_logs(response_json_str, region, project_id)
 
     except subprocess.CalledProcessError as e:
         # Критическая ошибка gcloud (например, неверный синтаксис или Job не существует)
@@ -89,14 +81,14 @@ def execute_command(command):
         print(f"\n❌ Execution/Parsing Error: {e}")
         sys.exit(1)
 
-def main(build_id):
+def main(build_id, project_id):
     for region in REGIONS:
         print(f"\n--- Начинаем вызов Cloud Run Job {FUNCTION} в регионе {region} ---")
 
         payload = str(json.dumps({
             'source': 'gs://qa-test-roidev/tests-wikly/source/',
             'region': region,
-            'build_id': BUILD_ID
+            'build_id': build_id
         }))
         b64_str = base64.b64encode(payload.encode('utf-8')).decode('utf-8')
         payload_value = f"INPUT_PAYLOAD='{b64_str}'"
@@ -110,12 +102,15 @@ def main(build_id):
         ]
 
         print(f"Вызываем Job. Команда: {' '.join(job_execute_command)}")
-        execute_command(job_execute_command)
+        execute_command(job_execute_command, region, project_id)
         print(f"✅ Успешно вызвано {FUNCTION} в {region}. Результат в логах Cloud Logging.")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python invoke_job.py <BUILD_ID>")
+    if len(sys.argv) < 3:
+        print("Usage: python invoke_job.py <BUILD_ID> <PROJECT_ID>")
         sys.exit(1)
-    
-    main(sys.argv[1])
+
+    build_id = sys.argv[1]
+    project_id = sys.argv[2]
+
+    main(build_id, project_id)
