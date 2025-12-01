@@ -33,7 +33,7 @@ def get_execution_logs(response_json_str, region, project_id):
         '--project', project_id,
         '--format=json' 
     ]
-    time.sleep(7)
+    time.sleep(15)
 
     log_result = subprocess.run(log_read_command, check=False, capture_output=True, text=True)
     print("log_result", log_result)
