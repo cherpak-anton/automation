@@ -94,7 +94,6 @@ def execute_command(command, region, project_id):
         result = subprocess.run(command, check=True, capture_output=True, text=True)
         print("Finished", datetime.datetime.now())
         response_json_str = result.stdout.strip()
-        print("response_json_str", response_json_str)
 
         if not response_json_str:
             print("response_json_str пуст. Проверьте, что команда завершилась успешно и вернула JSON.")
