@@ -1,3 +1,4 @@
+import configparser
 import subprocess
 import datetime
 import base64
@@ -6,8 +7,18 @@ import time
 import sys
 import re
 
-REGIONS = ["europe-west2"] 
-FUNCTION = "my-function"
+config = configparser.ConfigParser()
+
+try:
+    config.read('build.ini')
+    FUNCTION_NAME = config['DEPLOYMENT']['CALL_FUNCTION_NAME']
+    REGIONS_STR = config['LOCATIONS']['REGIONS']
+    REGIONS = [r.strip() for r in REGIONS_STR.split(',')]
+
+except Exception as e:
+    print(f"CRITICAL ERROR: Could not read build.ini OR Missing configuration key: {e}")
+    sys.exit(1)
+
 
 def log_analizer(logs):
     exit_code_pattern = re.compile(r'exit_?code[:\s]+(\d+)', re.IGNORECASE)
