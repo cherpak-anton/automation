@@ -6,7 +6,7 @@ import time
 import sys
 import re
 
-REGIONS = ["us-central1"]
+REGIONS = ["europe-west2"] 
 FUNCTION = "my-function"
 
 def log_analizer(logs):
