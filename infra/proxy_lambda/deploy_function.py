@@ -1,12 +1,26 @@
 # infra/proxy_lambda/deploy_function.py
+import configparser
 import subprocess
 import json
 import os
 import sys
 
-REGIONS = ["us-central1", "europe-west2"]        
-FUNCTION_NAME = "my-function"
-ENTRY_POINT = "main"
+config = configparser.ConfigParser()
+try:
+    config.read('build.cfg')
+except Exception as e:
+    print(f"ERROR: Could not read build.cfg: {e}")
+    sys.exit(1)
+
+try:
+    FUNCTION_NAME = config['DEPLOYMENT']['FUNCTION_NAME']
+    ENTRY_POINT = config['DEPLOYMENT']['ENTRY_POINT']
+    REGIONS_STR = config['LOCATIONS']['REGIONS']
+    REGIONS = [r.strip() for r in REGIONS_STR.split(',')]
+
+except KeyError as e:
+    print(f"CRITICAL ERROR: Missing configuration key in build.cfg: {e}")
+    sys.exit(1)
 
 def deploy_functions():
     try:
