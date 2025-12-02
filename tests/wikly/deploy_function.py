@@ -1,3 +1,4 @@
+# tests/wikly//deploy_function.py
 import configparser
 import subprocess
 import datetime
@@ -10,7 +11,7 @@ import re
 config = configparser.ConfigParser()
 
 try:
-    config.read('build.ini')
+    config.read('tests/wikly/build.ini')
     FUNCTION_NAME = config['DEPLOYMENT']['CALL_FUNCTION_NAME']
     REGIONS_STR = config['LOCATIONS']['REGIONS']
     REGIONS = [r.strip() for r in REGIONS_STR.split(',')]

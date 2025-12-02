@@ -8,7 +8,7 @@ import sys
 config = configparser.ConfigParser()
 
 try:
-    config.read('build.ini')
+    config.read('infra/proxy_lambda/build.ini')
     FUNCTION_NAME = config['DEPLOYMENT']['FUNCTION_NAME']
     ENTRY_POINT = config['DEPLOYMENT']['ENTRY_POINT']
     REGIONS_STR = config['LOCATIONS']['REGIONS']
