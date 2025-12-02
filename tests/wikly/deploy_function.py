@@ -12,7 +12,7 @@ config = configparser.ConfigParser()
 
 try:
     config.read('tests/wikly/build.ini')
-    FUNCTION_NAME = config['DEPLOYMENT']['CALL_FUNCTION_NAME']
+    FUNCTION = config['DEPLOYMENT']['CALL_FUNCTION_NAME']
     REGIONS_STR = config['LOCATIONS']['REGIONS']
     REGIONS = [r.strip() for r in REGIONS_STR.split(',')]
 
